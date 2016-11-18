@@ -70,7 +70,7 @@
         }
         #p{
             position: absolute;
-            top:600px;
+            top:700px;
             left: 100px;
             height: 60px;
             width: 28px;
@@ -85,8 +85,9 @@
             height: 60px;
             width: 28px;
             transition:all .5s ease-in-out;
+            /*display: none;*/
         }
-        #pp{
+        #pp {
             transition:all 1s ease-in-out;
         }
     </style>
@@ -114,7 +115,11 @@
     <div id="p"></div>
     <div id="p1"></div>
 </div>
-
+<script type="text/javascript">
+    document.getElementById('p').onclick = function () {
+        document.getElementById('p1').style.cssText = "height:0";
+    }
+</script>
 <script src="require.js" data-main="carousel.js"></script>
 </body>
 </html>
