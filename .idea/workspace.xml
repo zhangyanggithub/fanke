@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="015fb107-749f-4583-883a-965ef2419cf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/menu.js" afterPath="$PROJECT_DIR$/commenFunction/menu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/all-icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/notice.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/tl.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/weibo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/weixin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/weixinbig.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/carousel.html" afterPath="$PROJECT_DIR$/commenFunction/carousel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/menu.html" afterPath="$PROJECT_DIR$/commenFunction/menu.html" />
     </list>
     <ignored path="fanke.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,31 +34,82 @@
       <file leaf-file-name="carousel.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commenFunction/carousel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1507">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state relative-caret-position="297">
+              <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commenFunction/menu.js">
+      <file leaf-file-name="cotent.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commenFunction/cotent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-              <folding>
-                <element signature="e#310#2157#0" expanded="false" />
-                <element signature="e#2186#2603#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all-icons.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/images/all-icons.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crousel-arrow.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/images/crousel-arrow.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logo.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/images/logo.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notice.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/images/notice.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tl.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/images/tl.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weixinbig.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/images/weixinbig.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="menu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commenFunction/menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+            <state relative-caret-position="-858">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <folding>
+                <element signature="n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carousel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commenFunction/carousel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-946">
+              <caret line="26" column="61" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -74,9 +133,11 @@
         <option value="$PROJECT_DIR$/commenFunction/zy.js" />
         <option value="$PROJECT_DIR$/commenFunction/test.html" />
         <option value="$PROJECT_DIR$/commenFunction/carousel.js" />
-        <option value="$PROJECT_DIR$/commenFunction/carousel.html" />
-        <option value="$PROJECT_DIR$/commenFunction/menu.html" />
         <option value="$PROJECT_DIR$/commenFunction/menu.js" />
+        <option value="$PROJECT_DIR$/commenFunction/menu.html" />
+        <option value="$PROJECT_DIR$/commenFunction/carousel.html" />
+        <option value="$PROJECT_DIR$/commenFunction/header.html" />
+        <option value="$PROJECT_DIR$/commenFunction/cotent.html" />
       </list>
     </option>
   </component>
@@ -260,12 +321,12 @@
       <updated>1479281940913</updated>
       <workItem from="1479281942167" duration="2560000" />
       <workItem from="1479428704183" duration="21272000" />
-      <workItem from="1479471200543" duration="9338000" />
+      <workItem from="1479471200543" duration="18995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33170000" />
+    <option name="totallyTimeSpent" value="42827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -311,7 +372,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -320,7 +383,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#310#2157#0" expanded="false" />
             <element signature="e#2186#2603#0" expanded="false" />
           </folding>
         </state>
@@ -426,38 +488,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/carousel.js">
+    <entry file="file://$PROJECT_DIR$/commenFunction/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="131">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#2186#2603#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/carousel.html">
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/weixin.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/weibo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1507">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state relative-caret-position="653">
+          <caret line="161" column="52" selection-start-line="161" selection-start-column="52" selection-end-line="161" selection-end-column="52" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-946">
+          <caret line="26" column="61" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        <state relative-caret-position="-858">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/all-icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/crousel-arrow.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/notice.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/tl.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/weixinbig.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/menu.js">
+    <entry file="file://$PROJECT_DIR$/commenFunction/cotent.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-          <folding>
-            <element signature="e#310#2157#0" expanded="false" />
-            <element signature="e#2186#2603#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="88">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
