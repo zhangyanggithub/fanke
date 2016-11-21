@@ -1,0 +1,64 @@
+#carouselContainer{
+    width: 1200px;
+    height: 535px;
+    position: relative;
+}
+#picture{
+    overflow: hidden;
+}
+.pic-item{
+    transition:all .5s ease-in-out;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.pic-item img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float:left;
+}
+#dot{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    margin-left: -60px;
+    width: 120px;
+}
+.dot-item{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dddddd;
+    margin-right: 10px;
+    float: left;
+}
+.dot-item:hover{
+    background-color: #a10000;
+}
+.arrow{
+    cursor: pointer;
+    height: 60px;
+    width: 28px;
+    position: absolute;
+    top:50%;
+    margin-top:-30px;
+    background: url("../images/crousel-arrow.png") no-repeat;
+}
+.left{
+    background-position: 0 0;
+    left:20px;
+}
+.left:hover{
+    background-position: 0px -61px
+}
+.right{
+    background-position:  -52px 0px;
+    right:20px;
+}
+.right:hover{
+    background-position: -52px -61px
+}

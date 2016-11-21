@@ -7,7 +7,6 @@ require(['zy.js'],function(zy) {
         this.menuEvent('mouseenter');
         this.menuEvent('mouseleave');
     };
-
     menu.prototype = {
         menuEvent:function (flag) {
             var that = this;
@@ -56,8 +55,9 @@ require(['zy.js'],function(zy) {
                 var contentUl = contentEle.getElementsByTagName('ul')[0];
                 this.ulHeight.push(contentUl.offsetHeight);
             }
-            console.log(this.ulHeight);
         },
     };
     new menu();
+
+    
 });

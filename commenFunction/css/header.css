@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    border:0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#header{
+    height: 31px;
+    background: #f7f7f7;
+    color: #808080;
+    font-size: 12px;
+    font-family: "宋体";
+}
+#user{
+    margin-left: 58%;
+}
+#user div{
+    float: left;
+    margin:9px;
+}
+#header a{
+    color: #808080;
+}
+#header-border{
+    background-color: #a10000;
+    height:12px;
+    width:1px;
+}
+.change a{
+    color: #a10000 !important;
+}
+#order a:hover, #notice a:hover{
+    color: #a10000;
+}
+#notice{
+    background: url("../images/notice.png") no-repeat left center;
+}
+#notice a{
+    margin-left: 23px;
+}
+#wechat-icon{
+    cursor: pointer;
+    position: relative;
+    width:18px;
+    height:18px;
+    background: url("../images/weixin.jpg") no-repeat;
+}
+#big-wechat-icon{
+    display: none;
+    position: absolute;
+    top: 13px;
+    left: -123px;
+    width:147px;
+    height:168px;
+    background: url("../images/weixinbig.png") no-repeat;
+}
+#wechat-icon:hover #big-wechat-icon{
+    display: block;
+}
+#weibo-icon{
+    cursor: pointer;
+    margin-left: 0 !important;
+    width:18px;
+    height:18px;
+    background: url("../images/weibo.jpg") no-repeat;
+}
+.w-icon{
+    margin-left: 0 !important;
+    margin-top: 7px !important;
+}
+#search{
+    font-size: 12px;
+    font-family: "宋体";
+    color: #333;
+    width:438px;
+    height:60px;
+    margin:-37px 0 0 757px;
+}
+#search-box{
+    height:29px;
+    float: left;
+    position: relative;
+}
+#hot-search{
+    height:23px;
+    float: left;
+    margin: 5px 0 0 8px;
+}
+#search-text{
+    width:261px;
+    height: 27px;
+    line-height: 27px;
+    border: 1px solid #c9caca;
+    float: left;
+}
+#search-box ul{
+    position: absolute;
+    border: thin solid #999;
+    width: 261px;
+    top: 28px;
+    z-index: 2;
+}
+#search-box li{
+    background-color: #FFF;
+    height:19px;
+    padding-left: 5px;
+    cursor: default;
+    line-height: 16px;
+}
+#search-box li a{
+    color: #777 !important;
+    font-size: 12px;
+}
+#search-box li:hover{
+    background-color: #3399ff;
+}
+#search-box li:hover a{
+    color: white !important;
+}
+#search-button{
+    float: left;
+    height: 100%;
+    width:49px;
+    margin-right: 19px;
+    background: url("../images/all-icons.png") no-repeat  -100px 0;
+}
+#zy-shopping-car{
+    border: 1px solid #c1383e;
+    float: left;
+    height: 100%;
+    width:107px;
+    color: #FFF;
+    background: url("../images/all-icons.png") no-repeat  -153px 0;
+}
+#zy-shopping-car:hover{
+    color: #c1383e;
+    background: url("../images/all-icons.png") no-repeat  -153px -29px;
+}
+.pointer-icon{
+    cursor: pointer;
+}
+#hot-search ul,#hot-search ul li,#hot-font{
+    float: left;
+}
+#hot-search ul li{
+    margin-left: 5px;
+
+}
+#hot-search ul li a{
+    color: #727171;
+}
+#wrap{
+    position: absolute;
+    width: 1200px;
+    top: 100px;
+    left: 50%;
+    margin-left: -600px;
+}
