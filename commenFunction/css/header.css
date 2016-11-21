@@ -99,6 +99,7 @@ ul{
     float: left;
 }
 #search-box ul{
+    display: none;
     position: absolute;
     border: thin solid #999;
     width: 261px;
@@ -111,6 +112,11 @@ ul{
     padding-left: 5px;
     cursor: default;
     line-height: 16px;
+}
+#search-box li span{
+    float: right;
+    margin-right: 20px;
+    color: green;
 }
 #search-box li a{
     color: #777 !important;
