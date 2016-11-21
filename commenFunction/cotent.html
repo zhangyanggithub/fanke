@@ -119,7 +119,10 @@
         }
         #help{
             width: 1198px;
-            border:1px solid #e0e0e1;
+            padding-top: 20px;
+            height: 234px;
+            margin: 41px 0 26px 0;
+            border: 1px solid #e0e0e1;
             font-size: 14px;
             font-family: "Microsoft YaHei";
             color: #727171;
@@ -151,24 +154,29 @@
         }
 
         #help ul{
-            margin-left: 68px;
+            margin-left: 9px;
             position: absolute;
             padding: 12px 0;
             background: #f8f8f8;
-            width: 100%;
+            width: 91%;
             top: 175px;
         }
         #help li{
+            border-right: thin solid #e0e0e1;
+            text-align: center;
             line-height: 26px;
             width: 179px;
-            height:26px;
+            height: 26px;
             float: left;
         }
+        #help li:last-child{
+            border-right:0;
+        }
         #help li a{
+            text-decoration: none;
             font-family: "Microsoft YaHei";
             font-size: 14px;
             color: #727171;
-            text-decoration: none;
         }
         #cancel-orders{
             border-left: 1px solid #e0e0e1;
@@ -196,6 +204,59 @@
             left: 50%;
             top: 96px;
             margin-left: -60px;
+        }
+        #copyright{
+            border-top: 1px solid;
+            padding-top: 10px;
+            float: left;
+            height:136px;
+            width:100%;
+        }
+        #copyright p{
+            text-align: center;
+            line-height: 25px;
+            color: #3e3a39;
+            font-family: "Microsoft YaHei";
+            font-size: 12px;
+        }
+        #copyright ul{
+            height: 42px;
+            margin: 20px 0 0 -374px;
+            position: absolute;
+            left: 50%;
+        }
+        #copyright li{
+            height: 42px;
+            margin-left: 20px;
+            float: left;
+        }
+        #copyright li:nth-child(1){
+            background: url("images/spritesbgtop.png") no-repeat  0 -581px;
+            width: 113px;
+        }
+        #copyright li:nth-child(2){
+            background: url("images/spritesbgtop.png")  no-repeat 0 -629px;
+            width: 156px;
+        }
+        #copyright li:nth-child(3){
+            background: url("images/spritesbgtop.png") no-repeat  0 -675px ;
+            width: 96px;
+        }
+        #copyright li:nth-child(4){
+            background: url("images/spritesbgtop.png") no-repeat  -97px -675px;
+            width: 101px;
+        }
+        #copyright li:nth-child(5){
+            background: url("images/spritesbgtop.png") no-repeat  -202px -675px ;
+            width: 42px;
+        }
+        #copyright li:nth-child(6){
+            height: 39px;
+            width: 120px;
+        }
+        #copyright li:nth-child(6) img{
+            height: 39px;
+            width: 120px;
         }
     </style>
 </head>
@@ -473,7 +534,18 @@
             <li><a href="##">帮助中心</a></li>
         </ul>
     </div>
-
+</div>
+<div id="copyright">
+    <p>Copyright 2007 - 2016 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11011502002400号 出版物经营许可证新出发京批字第直110138号</p>
+    <p>凡客诚品（北京）科技有限公司</p>
+    <ul>
+        <li><a href="##"></a></li>
+        <li><a href="##"></a></li>
+        <li><a href="##"></a></li>
+        <li><a href="##"></a></li>
+        <li><a href="##"></a></li>
+        <li><a href="##"><img src="images/cctv.png" alt=""></a></li>
+    </ul>
 </div>
 </body>
 </html>
