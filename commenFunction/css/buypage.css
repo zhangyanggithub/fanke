@@ -1,0 +1,282 @@
+#bread-nav{
+    overflow: hidden;
+}
+#bread-nav li{
+    overflow: hidden;
+    float: left;
+}
+#bread-nav a{
+    font-size: 12px;
+    font-family:"宋体";
+    color: #333;
+}
+#bread-nav a:first-child{
+    margin-left: 0;
+}
+#bread-nav a:hover{
+    color: #a10000;
+}
+#bread-nav span{
+    font-size: 10px;
+    margin: 10px;
+}
+#desc-nav{
+    margin-top: 19px;
+    overflow: hidden;
+}
+#desc-nav h2{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    margin-left: 10px;
+    float: left;
+}
+#desc-nav ul{
+    float: right;
+    margin-right: 27px;
+}
+#desc-nav a{
+    font-family: 微软雅黑;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+}
+#desc-nav span{
+    margin:10px;
+    font-size:10px;
+}
+#desc-nav li{
+    float: left;
+}
+#select-area{
+    height:426px;
+}
+#pic-left{
+    float: left;
+    position: relative;
+}
+#left-pic-select{
+    width:70px;
+    box-sizing: border-box;
+    float: left;
+}
+.left-select-pic{
+    border:1px solid #B4B4B4;
+    height:70px;
+}
+.left-select-pic:hover{
+    border:1px solid #a10000;
+}
+.left-select-pic:first-child{
+    background: url("../images/left-pic-select.jpg") no-repeat 0 0;
+    margin-bottom: 11px;
+}
+.left-select-pic:last-child{
+    background: url("../images/left-pic-select.jpg") no-repeat 0 -66px;
+}
+#right-area-select{
+    float: left;
+    margin-left:80px;
+    width:566px;
+}
+#common-pic{
+    width:400px;
+    height:400px;
+    float: left;
+    border:1px solid #e5e6e6;
+    margin-left: 80px;
+}
+#common-pic img{
+    width:400px;
+    height:400px;
+}
+#big-pic img{
+    width:800px;
+    height:800px;
+}
+#big-pic{
+    position: absolute;
+    left: 554px;
+    display: none;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin-top: -20px;
+    border: thin solid;
+    margin-left: 2px;
+}
+#hr-bottom-desnav{
+    border-bottom: 1px solid #e5e6e6;
+    margin: 12px 0 31px 0;
+}
+#right-area-select{
+    font-size: 12px;
+    font-family: "宋体";
+}
+#price-show span {
+    margin: 5px;
+}
+#price-show{
+    color: #A10000;
+    margin-bottom: 33px;
+}
+#benefit-price h2{
+    display: inline;
+    font-family: Tahoma;
+    font-size: 24px;
+}
+#recharge a{
+    color: #A10000;
+}
+#sale-price span{
+    text-decoration: line-through;
+}
+#sale-price{
+    margin:0 !important;
+}
+.right-select-item{
+    margin:10px 0;
+    color: #666 !important;
+}
+#color li{
+    position: relative;
+    width:95px;
+    height:40px;
+    border:1px solid #B4B4B4;
+    float: left;
+    margin: 0 8px 8px 0;
+}
+#color li:hover{
+    border-color: #a10000;
+}
+a:active{
+    color:#666;
+}
+.little-img-right {
+    width:36px;
+    height:36px;
+    float: left;
+}
+.right-select-item span:first-child{
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+#color ul{
+    overflow: hidden;
+    margin-left:41px;
+}
+#size li{
+    border: 1px solid #C8C8C8;
+    padding: 5px 9px;
+    margin-right: 7px;
+    float: left;
+    text-align: center;
+}
+#size li a:hover #size li{
+    border: 1px solid #a10000;
+}
+#size span:first-child{
+    line-height: 27px;
+}
+.right-select-item{
+    clear: left;
+    margin-top: 21px;
+    overflow: hidden;
+}
+#color li .little-img-right:first-child{
+    background: url("../images/select-all-color.jpg") 0 0 no-repeat;
+}
+#color li a{
+    color:#666;
+}
+#color li span{
+    width: 37px;
+    margin: 6px 10px 0 0;
+    display: inline-block;
+    float: right;
+}
+.active-color{
+    background: url(../images/selected-bottom.png) -1151px 0 no-repeat;
+    width: 14px !important;
+    height: 13px;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+}
+#buy-number select{
+    border: thin solid #999;
+    width: 47px;
+}
+.bold{
+    font-weight:bold;
+    color:#666666;
+}
+#has-stock{
+    color:#A10000;
+}
+#buynow{
+    border: 1px solid #a10000;
+    background: #F7ABAF;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    color: #A50309;
+    line-height: 33px;
+    float: left;
+}
+#addcar{
+    background: url("../images/all-icons.png") no-repeat -147px -285px;
+    float: left;
+    margin-left:20px;
+}
+#go-buy a{
+    display: block;
+    width: 168px;
+    height: 33px;
+}
+#benefit-tip{
+    margin-top: 17px;
+    width: 366px;
+    text-align: center;
+}
+#benefit-tip span{
+    width: 157px;
+    height: 5px;
+    border-top: thin solid #A50309;
+    display: inline-block;
+}
+#benefit-tip span:last-child{
+    width: 363px;
+}
+#benefit-desc{
+    width: 128px;
+    display: inline;
+    line-height: 24px;
+}
+#benefit-call{
+    color:#A50309;
+    display: inline;
+    font-weight:bold;
+}
+#style span:first-child{
+    color: #999999;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+}
+#style span:last-child{
+    display: block;
+    background-color: #F9F9F9;
+    line-height: 38px;
+    color: #a10000;
+    font-size: 12px;
+    padding-left: 10px;
+}
+#style span:last-child a{
+    cursor: pointer;
+    color:#666;
+}
+#style span:last-child a:hover{
+    color: #a10000;
+}
