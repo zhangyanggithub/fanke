@@ -207,4 +207,137 @@ require(['../js/zy.js'],function(zy) {
         },
     };
     new pieces();
+    var picShow = function () {
+        this.color = "藏蓝";
+        this.changeCommon();
+        this.mouseEvent();
+        this.addColor();
+        this.windowLoad();
+        this.selectColor();
+        this.selectSize();
+        this.selectedShow();
+    };
+    picShow.prototype = {
+        windowLoad:function () {
+            var colorDes = zy_self.$('.colorDes');
+            for(var ele of colorDes){
+                if(ele.innerHTML == this.color){
+                    ele.parentNode.parentNode.style.cssText = 'border:1px solid  #a10000;';
+                    zy_self.get_nxt(ele).className = 'active-color';
+                }
+            }
+        },
+        changeCommon:function () {
+            var little_pic = zy_self.$(".left-select-pic");
+            var common_pic = zy_self.$("#common-pic");
+            var big_pic = zy_self.$("#big-pic");
+            var index;
+            for(var ele of little_pic){
+                ele.addEventListener("mouseover",function () {
+                    for(var elein of little_pic){
+                        elein.style.cssText = "border:1px solid #B4B4B4;";
+                    }
+                    this.style.cssText = " border:1px solid #a10000;";
+                    index = this.getAttribute("index");
+                    if(index == "look-1"){
+                        common_pic.getElementsByTagName('img')[0].src = "../images/common-pic-2.jpg";
+                        big_pic.getElementsByTagName('img')[0].src = "../images/big-pic-2.jpg";
+                    }else{
+                        common_pic.getElementsByTagName('img')[0].src = "../images/common-pic.jpg";
+                        big_pic.getElementsByTagName('img')[0].src = "../images/big-pic.jpg";
+
+                    }
+                    for(var elein of little_pic){
+                        elein.className = "left-select-pic";
+                    }
+                });
+            }
+        },
+        mouseEvent:function () {
+            var small_img = zy_self.$("#common-pic");
+            var mask = zy_self.$("#shadow-pic");
+            var small = zy_self.$("#small");
+            var big = zy_self.$("#big");
+            var big_pic = zy_self.$("#big-pic");
+            small_img.addEventListener("mouseout",function () {
+                mask.style.display = "none";
+                big_pic.style.display = "none";
+            });
+            small_img.addEventListener("mouseenter",function () {
+                mask.style.display = "block";
+                big_pic.style.display = "block";
+            });
+            small_img.addEventListener("mousemove",function (event) {
+                var e = event || window.event;
+                var offsetX = e.offsetX;//鼠标相对于当前元素左上角的偏移
+                var offsetY = e.offsetY;
+                var mask_top = offsetY-mask.offsetHeight/2;
+                var mask_left = offsetX-mask.offsetWidth/2;
+
+                mask_top = mask_top < 0 ? 0 : mask_top;
+                mask_top = mask_top > small_img.offsetHeight-mask.offsetHeight ? small_img.offsetHeight-mask.offsetHeight : mask_top;
+                mask_left = mask_left < 0 ? 0 : mask_left;
+                mask_left = mask_left > small_img.offsetWidth-mask.offsetWidth ? small_img.offsetWidth-mask.offsetWidth : mask_left;
+
+                mask.style.top = mask_top+'px';
+                mask.style.left = mask_left+'px';
+
+                var img_scaleX = big.offsetWidth/small.offsetWidth;
+                var img_scaleY = big.offsetHeight/small.offsetHeight;
+
+                var big_img_top = mask.offsetTop*img_scaleY ;
+                var big_img_left = mask.offsetLeft*img_scaleX;
+
+                big.style.top = -big_img_top+'px';
+                big.style.left = -big_img_left+'px';
+            });
+        },
+        addColor:function () {
+            var ul = zy_self.$("#color").getElementsByTagName('ul')[0];
+            var colorArr = ['紫底白条纹','蓝底白条纹','黑底白条纹','浅紫','黑色','复古蓝','藏蓝','浅灰','浅粉'];
+            var temp = '<li index="color-{seq}"><a href="##"><div class="little-img-right"></div><p class="colorDes">{colorDes}</p><span class="canActive"></span></a></li>';
+            var temp_h = null;
+            var html = [];
+            for(var i = 0; i< colorArr.length; i++){
+                temp_h = temp.replace(/\{seq\}/,i)
+                    .replace(/\{colorDes\}/,colorArr[i]);
+                html.push(temp_h);
+            }
+            ul.innerHTML = html.join('');
+            var ulChild = ul.children;
+            for(var j = 0; j< ulChild.length; j++){
+                ulChild[j].getElementsByClassName('little-img-right')[0].style.backgroundPosition = "0px "+j*36*(-1)+'px';
+            }
+        },
+        selectColor:function () {
+            this.selectColorSize('color');
+        },
+        selectSize:function () {
+            this.selectColorSize('size');
+        },
+        selectColorSize:function (id) {
+            var ul = zy_self.$('#'+id).getElementsByTagName('ul')[0];
+            var ulChild = ul.children;
+            for(var i = 0; i<ulChild.length; i++){
+                ulChild[i].addEventListener('click',function () {
+                    for(var j = 0; j<ulChild.length; j++){
+                        ulChild[j].getElementsByTagName('span')[0].className = '';
+                        ulChild[j].style.cssText = 'border:1px solid #B4B4B4;';
+                    }
+                    this.getElementsByTagName('span')[0].className = 'active-color';
+                    this.style.cssText = 'border:1px solid #a10000';
+                });
+            }
+        },
+        selectedShow:function () {
+            var showColorSize = zy_self.$('#show-select-item');
+            var eleSelect = zy_self.$('.active-color');
+            var color = zy_self.get_pre(eleSelect[0]).innerHTML;
+            var size =zy_self.get_pre(eleSelect[1]).innerHTML;
+            
+            showColorSize.innerHTML = color+","+size;
+
+        },
+    };
+    new picShow();
 });
