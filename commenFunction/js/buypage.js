@@ -209,47 +209,63 @@ require(['../js/zy.js'],function(zy) {
     new pieces();
     var picShow = function () {
         this.color = "藏蓝";
-        this.changeCommon();
         this.mouseEvent();
         this.addColor();
-        this.windowLoad();
         this.selectColor();
         this.selectSize();
         this.selectedShow();
+        this.changeCommon();
     };
     picShow.prototype = {
         windowLoad:function () {
             var colorDes = zy_self.$('.colorDes');
+            var colorIndex;
+            var img = new Image();
+            var tempList = '<li class="left-select-pic" index="look-{index}"></li>';
+            var html = [];
+            var len;
+            var tempH;
+            var left_pic_select = zy_self.$('#left-pic-select');
+            var leftList;
             for(var ele of colorDes){
                 if(ele.innerHTML == this.color){
-                    ele.parentNode.parentNode.style.cssText = 'border:1px solid  #a10000;';
+                    ele.parentNode.parentNode.style.cssText = 'border:1px solid #a10000;';
                     zy_self.get_nxt(ele).className = 'active-color';
+                    colorIndex = ele.parentNode.parentNode.getAttribute('index').substr(-1,1);
+                    img.src = '../images/left-pic-select-'+colorIndex+'.jpg';
+                    len = Math.floor(img.height/68);
+                    for (var i = 0; i < len; i++) {
+                        tempH = tempList.replace(/\{index\}/,i);
+                        html.push(tempH);
+                    }
+                    left_pic_select.innerHTML = html.join('');
+                    html.length = 0;
+                    leftList = left_pic_select.children;
+                    for(var j = 0; j < len; j++){
+                        leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
+                    }
+                    break;
                 }
             }
+            zy_self.$('#head-color').innerHTML = this.color;
+            zy_self.$('#small').src = "../images/common-pic-"+colorIndex+"-0.jpg";
+            zy_self.$('#big').src = "../images/big-pic-"+colorIndex+"-0.jpg";
         },
         changeCommon:function () {
             var little_pic = zy_self.$(".left-select-pic");
-            var common_pic = zy_self.$("#common-pic");
-            var big_pic = zy_self.$("#big-pic");
-            var index;
+            var leftIndex;
+            var colorIndex;
             for(var ele of little_pic){
-                ele.addEventListener("mouseover",function () {
-                    for(var elein of little_pic){
-                        elein.style.cssText = "border:1px solid #B4B4B4;";
+                ele.addEventListener("mouseenter",function () {
+                    alert(this.style.border);
+                  /*  for(var elein of little_pic){
+                      elein.style['border'] = "1px solid #B4B4B4;";
                     }
-                    this.style.cssText = " border:1px solid #a10000;";
-                    index = this.getAttribute("index");
-                    if(index == "look-1"){
-                        common_pic.getElementsByTagName('img')[0].src = "../images/common-pic-2.jpg";
-                        big_pic.getElementsByTagName('img')[0].src = "../images/big-pic-2.jpg";
-                    }else{
-                        common_pic.getElementsByTagName('img')[0].src = "../images/common-pic.jpg";
-                        big_pic.getElementsByTagName('img')[0].src = "../images/big-pic.jpg";
-
-                    }
-                    for(var elein of little_pic){
-                        elein.className = "left-select-pic";
-                    }
+                    this.style['border'] = "1px solid #a10000;";*/
+                    leftIndex = this.getAttribute("index").substr(-1,1);
+                    colorIndex = zy_self.$('.active-color')[0].parentNode.parentNode.getAttribute('index').substr(-1,1);
+                    zy_self.$('#small').src = "../images/common-pic-"+colorIndex+"-"+leftIndex+".jpg";
+                    zy_self.$('#big').src = "../images/big-pic-"+colorIndex+"-"+leftIndex+".jpg";
                 });
             }
         },
@@ -308,9 +324,42 @@ require(['../js/zy.js'],function(zy) {
             for(var j = 0; j< ulChild.length; j++){
                 ulChild[j].getElementsByClassName('little-img-right')[0].style.backgroundPosition = "0px "+j*36*(-1)+'px';
             }
+            this.windowLoad();
         },
         selectColor:function () {
             this.selectColorSize('color');
+            var ul = zy_self.$('#color').getElementsByTagName('ul')[0];
+            var ulChild = ul.children;
+            var currentIndex ;
+            var tempList = '<li class="left-select-pic" index="look-{index}"></li>';
+            var html = [];
+            var len;
+            var tempH;
+            var img = new Image();
+            var left_pic_select = zy_self.$('#left-pic-select');
+            var leftList;
+            var that = this;
+            for(var i = 0; i<ulChild.length; i++){
+                ulChild[i].addEventListener('click',function () {
+                    currentIndex = this.getAttribute('index').substr(-1,1);
+                    img.src = '../images/left-pic-select-'+currentIndex+'.jpg';
+                    len = Math.floor(img.height/68);
+                    for (var i = 0; i < len; i++) {
+                        tempH = tempList.replace(/\{index\}/,i);
+                        html.push(tempH);
+                    }
+                    left_pic_select.innerHTML = html.join('');
+                    html.length = 0;
+                    leftList = left_pic_select.children;
+                    for(var j = 0; j < len; j++){
+                        leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
+                    }
+                    zy_self.$('#small').src = "../images/common-pic-"+currentIndex+"-0"+".jpg";
+                    zy_self.$('#big').src = "../images/big-pic-"+currentIndex+"-0"+".jpg";
+                    that.changeCommon();
+                });
+            }
+
         },
         selectSize:function () {
             this.selectColorSize('size');
@@ -335,8 +384,24 @@ require(['../js/zy.js'],function(zy) {
             var color;
             var size;
             var typeList;
+            listenHover('color','mouseenter');
+            listenHover('color','mouseleave');
             listenSelect('size');
             listenSelect('color');
+            function listenHover(typeSelect,event) {
+                typeList = zy_self.$('#'+typeSelect).getElementsByTagName('li');
+                for (var i = typeList.length - 1; i >= 0; i--) {
+                    typeList[i].addEventListener(event,function(){
+                        if(event == 'mouseenter'){
+                            this.style.cssText = 'border:1px solid #a10000';
+                        }else if(event == 'mouseleave'){
+                            this.style.cssText = 'border:1px solid #B4B4B4;';
+                            zy_self.$('.active-color')[0].parentNode.parentNode.style.cssText = 'border:1px solid #a10000';
+                        }
+
+                    });
+                }
+            }
             function listenSelect(typeSelect){
                 typeList = zy_self.$('#'+typeSelect).getElementsByTagName('li');
                 for (var i = typeList.length - 1; i >= 0; i--) {
@@ -345,9 +410,9 @@ require(['../js/zy.js'],function(zy) {
                     color = zy_self.get_pre(eleSelect[0]).innerHTML;
                     if (eleSelect.length > 1) {
                         size = zy_self.get_pre(eleSelect[1]).innerHTML;
-                        showColorSize.innerHTML = color+"，"+size;
+                        zy_self.$('#head-color').innerHTML = showColorSize.innerHTML = color+"，"+size;
                     }else{
-                         showColorSize.innerHTML = color;
+                        zy_self.$('#head-color').innerHTML = showColorSize.innerHTML = color;
                     }
                 });
             }
