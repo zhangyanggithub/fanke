@@ -331,12 +331,27 @@ require(['../js/zy.js'],function(zy) {
         },
         selectedShow:function () {
             var showColorSize = zy_self.$('#show-select-item');
-            var eleSelect = zy_self.$('.active-color');
-            var color = zy_self.get_pre(eleSelect[0]).innerHTML;
-            var size =zy_self.get_pre(eleSelect[1]).innerHTML;
-            
-            showColorSize.innerHTML = color+","+size;
-
+            var eleSelect;
+            var color;
+            var size;
+            var typeList;
+            listenSelect('size');
+            listenSelect('color');
+            function listenSelect(typeSelect){
+                typeList = zy_self.$('#'+typeSelect).getElementsByTagName('li');
+                for (var i = typeList.length - 1; i >= 0; i--) {
+                typeList[i].addEventListener('click',function(){
+                    eleSelect = zy_self.$('.active-color');
+                    color = zy_self.get_pre(eleSelect[0]).innerHTML;
+                    if (eleSelect.length > 1) {
+                        size = zy_self.get_pre(eleSelect[1]).innerHTML;
+                        showColorSize.innerHTML = color+"，"+size;
+                    }else{
+                         showColorSize.innerHTML = color;
+                    }
+                });
+            }
+            }
         },
     };
     new picShow();
