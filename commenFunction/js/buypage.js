@@ -149,14 +149,15 @@ require(['../js/zy.js'],function(zy) {
                     this.ajaxData.push(str2[3]+''+str2[9]);
                     this.ajaxData2.push(str2[6].substr(1).split(',')[0]);
                 }
+                html.length = 0;
+                inputItem.innerHTML = '';
                 for(; i<len; i++){
                     str = template.replace(/\{usertext\}/, this.ajaxData[i])
                         .replace(/\{number\}/,this.ajaxData2[i]);
                     html.push(str);
                 }
                 inputItem.innerHTML = html.join('');
-                console.log(inputItem.innerHTML);
-            }
+              }
         },
         userItemHover:function () {
             var inputItem = zy_self.$('#input-item');
@@ -215,8 +216,20 @@ require(['../js/zy.js'],function(zy) {
         this.selectSize();
         this.selectedShow();
         this.changeCommon();
+        this.leftHoverEvent();
     };
     picShow.prototype = {
+        leftHoverEvent:function () {
+            var little_pic = zy_self.$(".left-select-pic");
+            for(var ele of little_pic){
+                ele.onmouseover = function () {
+                    for(var ele1 of little_pic){
+                        ele1.className = 'left-select-pic';
+                    }
+                    this.className += ' red-border';
+                };
+            }
+        },
         windowLoad:function () {
             var colorDes = zy_self.$('.colorDes');
             var colorIndex;
@@ -257,8 +270,7 @@ require(['../js/zy.js'],function(zy) {
             var colorIndex;
             for(var ele of little_pic){
                 ele.addEventListener("mouseenter",function () {
-                    alert(this.style.border);
-                  /*  for(var elein of little_pic){
+                   /* for(var elein of little_pic){
                       elein.style['border'] = "1px solid #B4B4B4;";
                     }
                     this.style['border'] = "1px solid #a10000;";*/
@@ -354,9 +366,11 @@ require(['../js/zy.js'],function(zy) {
                     for(var j = 0; j < len; j++){
                         leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
                     }
+
                     zy_self.$('#small').src = "../images/common-pic-"+currentIndex+"-0"+".jpg";
                     zy_self.$('#big').src = "../images/big-pic-"+currentIndex+"-0"+".jpg";
                     that.changeCommon();
+                    that.leftHoverEvent();
                 });
             }
 

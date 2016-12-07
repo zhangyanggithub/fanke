@@ -243,6 +243,8 @@ require(['../js/zy.js'],function(zy) {
                   this.ajaxData.push(str2[3]+''+str2[9]);
                   this.ajaxData2.push(str2[6].substr(1).split(',')[0]);
               }
+              html.length = 0;
+              inputItem.innerHTML = '';
               for(; i<len; i++){
                   str = template.replace(/\{usertext\}/, this.ajaxData[i])
                                 .replace(/\{number\}/,this.ajaxData2[i]);

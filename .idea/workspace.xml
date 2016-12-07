@@ -1,41 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/commenFunction/js/buypage.js" line="213" />
-    <bookmark url="file://$PROJECT_DIR$/commenFunction/js/buypage.js" line="344" />
+    <bookmark url="file://$PROJECT_DIR$/commenFunction/js/buypage.js" line="214" />
+    <bookmark url="file://$PROJECT_DIR$/commenFunction/js/buypage.js" line="356" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015fb107-749f-4583-883a-965ef2419cf1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-0-0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-0-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-1-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-2-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-3-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-8-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-0-0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-0-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-1-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-2-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-5-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-6-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-7-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commenFunction/images/big-pic-2.jpg" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-6-1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commenFunction/images/big-pic.jpg" afterPath="$PROJECT_DIR$/commenFunction/images/big-pic-6-0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commenFunction/images/common-pic-2.jpg" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-4-1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commenFunction/images/common-pic.jpg" afterPath="$PROJECT_DIR$/commenFunction/images/common-pic-6-0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/commenFunction/images/left-pic-select.jpg" afterPath="$PROJECT_DIR$/commenFunction/images/left-pic-select-4.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/css/buypage.css" afterPath="$PROJECT_DIR$/commenFunction/css/buypage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/html/buyPage.html" afterPath="$PROJECT_DIR$/commenFunction/html/buyPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/js/buypage.js" afterPath="$PROJECT_DIR$/commenFunction/js/buypage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/js/main.js" afterPath="$PROJECT_DIR$/commenFunction/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/main.js" afterPath="$PROJECT_DIR$/commenFunction/main.js" />
     </list>
     <ignored path="fanke.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,11 +34,10 @@
       <file leaf-file-name="buyPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commenFunction/html/buyPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="210" column="72" selection-start-line="210" selection-start-column="67" selection-end-line="210" selection-end-column="72" />
+            <state relative-caret-position="353">
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="30" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -76,8 +50,8 @@
       <file leaf-file-name="buypage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commenFunction/css/buypage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1363">
-              <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+            <state relative-caret-position="265">
+              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -86,17 +60,20 @@
       <file leaf-file-name="buypage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commenFunction/js/buypage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
+            <state relative-caret-position="393">
+              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
               <folding>
-                <element signature="e#8533#10179#0" expanded="false" />
-                <element signature="e#11161#12964#0" expanded="false" />
-                <element signature="e#15590#15643#0" expanded="false" />
-                <element signature="e#16387#18260#0" expanded="false" />
-                <marker date="1481030187553" expanded="false" signature="122:256" ph="{...}" />
-                <marker date="1481030187553" expanded="false" signature="279:2575" ph="{...}" />
-                <marker date="1481030187553" expanded="false" signature="2622:2847" ph="{...}" />
-                <marker date="1481030187553" expanded="false" signature="2872:8225" ph="{...}" />
+                <element signature="e#122#256#0" expanded="false" />
+                <element signature="e#279#2575#0" expanded="false" />
+                <element signature="e#2622#2847#0" expanded="false" />
+                <element signature="e#8302#8532#0" expanded="false" />
+                <element signature="e#8558#18736#0" expanded="false" />
+                <element signature="e#9004#10650#0" expanded="false" />
+                <element signature="e#11586#13389#0" expanded="false" />
+                <element signature="e#13420#14332#0" expanded="false" />
+                <element signature="e#16059#16112#0" expanded="false" />
+                <element signature="e#16152#16821#0" expanded="false" />
+                <element signature="e#16856#18729#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,17 +104,17 @@
         <option value="$PROJECT_DIR$/commenFunction/menu.js" />
         <option value="$PROJECT_DIR$/commenFunction/css/menu.css" />
         <option value="$PROJECT_DIR$/commenFunction/gototop.js" />
-        <option value="$PROJECT_DIR$/commenFunction/main.js" />
         <option value="$PROJECT_DIR$/commenFunction/css/header.css" />
         <option value="$PROJECT_DIR$/commenFunction/css/content.css" />
         <option value="$PROJECT_DIR$/commenFunction/zy.js" />
         <option value="$PROJECT_DIR$/commenFunction/buyPage.html" />
         <option value="$PROJECT_DIR$/commenFunction/index.html" />
         <option value="$PROJECT_DIR$/commenFunction/html/index.html" />
-        <option value="$PROJECT_DIR$/commenFunction/js/main.js" />
         <option value="$PROJECT_DIR$/commenFunction/html/buyPage.html" />
-        <option value="$PROJECT_DIR$/commenFunction/css/buypage.css" />
+        <option value="$PROJECT_DIR$/commenFunction/js/main.js" />
+        <option value="$PROJECT_DIR$/commenFunction/main.js" />
         <option value="$PROJECT_DIR$/commenFunction/js/buypage.js" />
+        <option value="$PROJECT_DIR$/commenFunction/css/buypage.css" />
       </list>
     </option>
   </component>
@@ -178,6 +155,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,64 +207,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fanke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fanke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commenFunction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fanke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fanke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commenFunction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fanke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fanke" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commenFunction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,12 +307,13 @@
       <workItem from="1479801050447" duration="641000" />
       <workItem from="1480057946537" duration="101000" />
       <workItem from="1480896277735" duration="25898000" />
-      <workItem from="1480982354342" duration="28548000" />
+      <workItem from="1480982354342" duration="28666000" />
+      <workItem from="1481069417563" duration="4720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136122000" />
+    <option name="totallyTimeSpent" value="140960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,13 +331,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15145755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -434,56 +358,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/commenFunction/require.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/images/tl.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/my_bing.js" />
-    <entry file="file://$PROJECT_DIR$/commenFunction/gototop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="14" selection-start-line="21" selection-start-column="11" selection-end-line="29" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="69" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/carousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="97" column="3" selection-start-line="97" selection-start-column="3" selection-end-line="97" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="58" column="6" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
@@ -510,23 +384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="12" />
-          <folding>
-            <element signature="e#116#250#0" expanded="false" />
-            <element signature="e#2617#2884#0" expanded="false" />
-            <element signature="e#2911#6015#0" expanded="false" />
-            <element signature="e#6350#6491#0" expanded="false" />
-            <element signature="e#6521#6786#0" expanded="false" />
-            <element signature="e#6812#6986#0" expanded="false" />
-            <element signature="e#10318#11430#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -534,7 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -543,20 +399,6 @@
         <state relative-caret-position="352">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="59" column="15" selection-start-line="1" selection-start-column="4" selection-end-line="59" selection-end-column="15" />
-          <folding>
-            <element signature="e#279#2575#0" expanded="false" />
-            <element signature="e#2623#2890#0" expanded="false" />
-            <element signature="e#2917#6021#0" expanded="false" />
-            <element signature="e#6072#6297#0" expanded="false" />
-            <element signature="e#6322#11443#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,7 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
           <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -629,15 +470,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/images/big-pic-3-1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/big-pic-3-1.jpg" />
     <entry file="file://$PROJECT_DIR$/commenFunction/images/common-pic-1-1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -766,13 +602,89 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="246" column="39" selection-start-line="246" selection-start-column="39" selection-end-line="246" selection-end-column="39" />
+          <folding>
+            <element signature="e#116#250#0" expanded="false" />
+            <element signature="e#2617#2884#0" expanded="false" />
+            <element signature="e#2911#6015#0" expanded="false" />
+            <element signature="e#6350#6491#0" expanded="false" />
+            <element signature="e#6521#6786#0" expanded="false" />
+            <element signature="e#6812#6986#0" expanded="false" />
+            <element signature="e#10389#11501#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="251" column="15" selection-start-line="251" selection-start-column="15" selection-end-line="251" selection-end-column="15" />
+          <folding>
+            <element signature="e#279#2575#0" expanded="false" />
+            <element signature="e#2623#2890#0" expanded="false" />
+            <element signature="e#2917#6021#0" expanded="false" />
+            <element signature="e#6072#6297#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_01.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_02.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_03.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_04.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_06.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_08.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_07.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/1090779_10.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/css/buypage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/html/buyPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="210" column="72" selection-start-line="210" selection-start-column="67" selection-end-line="210" selection-end-column="72" />
+        <state relative-caret-position="353">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="30" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -781,27 +693,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/css/buypage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1363">
-          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/js/buypage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="259" column="40" selection-start-line="259" selection-start-column="40" selection-end-line="259" selection-end-column="40" />
+        <state relative-caret-position="393">
+          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
           <folding>
-            <element signature="e#8533#10179#0" expanded="false" />
-            <element signature="e#11161#12964#0" expanded="false" />
-            <element signature="e#15590#15643#0" expanded="false" />
-            <element signature="e#16387#18260#0" expanded="false" />
-            <marker date="1481030187553" expanded="false" signature="122:256" ph="{...}" />
-            <marker date="1481030187553" expanded="false" signature="279:2575" ph="{...}" />
-            <marker date="1481030187553" expanded="false" signature="2622:2847" ph="{...}" />
-            <marker date="1481030187553" expanded="false" signature="2872:8225" ph="{...}" />
+            <element signature="e#122#256#0" expanded="false" />
+            <element signature="e#279#2575#0" expanded="false" />
+            <element signature="e#2622#2847#0" expanded="false" />
+            <element signature="e#8302#8532#0" expanded="false" />
+            <element signature="e#8558#18736#0" expanded="false" />
+            <element signature="e#9004#10650#0" expanded="false" />
+            <element signature="e#11586#13389#0" expanded="false" />
+            <element signature="e#13420#14332#0" expanded="false" />
+            <element signature="e#16059#16112#0" expanded="false" />
+            <element signature="e#16152#16821#0" expanded="false" />
+            <element signature="e#16856#18729#0" expanded="false" />
           </folding>
         </state>
       </provider>

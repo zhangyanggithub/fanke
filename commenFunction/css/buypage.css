@@ -43,13 +43,16 @@
     margin-right: 27px;
 }
 #desc-nav a{
-    font-family: 微软雅黑;
+    font-family: "Microsoft YaHei UI";
     color: #000;
     font-weight: bold;
     font-size: 15px;
 }
 #desc-nav li{
     float: left;
+}
+#desc-nav li span{
+    margin: 10px;
 }
 #select-area{
     height:426px;
@@ -70,6 +73,9 @@
     height:68px;
     cursor: pointer;
     margin-bottom: 11px;
+}
+.red-border{
+    border:1px solid #a10000;
 }
 /*.left-select-pic:first-child{
     border:1px solid #a10000;
