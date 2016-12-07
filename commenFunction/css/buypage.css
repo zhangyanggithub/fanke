@@ -1,9 +1,13 @@
 #bread-nav{
     overflow: hidden;
+    margin-bottom: 16px;
 }
 #bread-nav li{
     overflow: hidden;
     float: left;
+}
+#nav-item{
+    float: right;
 }
 #bread-nav a{
     font-size: 12px;
@@ -24,7 +28,10 @@
     margin-top: 19px;
     overflow: hidden;
 }
-
+#will-fixed{
+    /*z-index: 2;*/
+    background-color: #FFF;
+}
 #desc-nav h2{
     font-size: 18px;
     font-weight: bold;
@@ -38,11 +45,11 @@
     font-weight: bold;
     font-family: "Microsoft YaHei";
  }
-#desc-nav ul{
-    float: right;
-    margin-right: 27px;
-}
+/*#desc-nav ul{
+    margin-left: 672px;
+}*/
 #desc-nav a{
+    line-height: 33px;
     font-family: "Microsoft YaHei UI";
     color: #000;
     font-weight: bold;
@@ -55,6 +62,7 @@
     margin: 10px;
 }
 #select-area{
+    margin-top: 20px;
     height:426px;
 }
 #pic-left{
@@ -138,9 +146,15 @@
     border: thin solid;
     margin-left: 2px;
 }
-#hr-bottom-desnav{
+.choose-img a:hover {
+    color: #A10000 !important;
+}
+.hover-red a{
+    color: #A10000 !important;
+}
+.hr{
     border-bottom: 1px solid #e5e6e6;
-    margin: 12px 0 31px 0;
+    margin: 3px 0 -9px 0;
 }
 #right-area-select{
     font-size: 12px;
@@ -262,6 +276,13 @@ a:active{
     color: #A50309;
     line-height: 33px;
     float: left;
+}
+#head-addCar{
+    background: url("../images/all-icons.png") no-repeat -147px -285px;
+    width: 168px;
+    height: 33px;
+    display: none;
+    margin-left: 10px;
 }
 #addcar{
     background: url("../images/all-icons.png") no-repeat -147px -285px;

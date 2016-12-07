@@ -434,4 +434,95 @@ require(['../js/zy.js'],function(zy) {
         },
     };
     new picShow();
+    var scrollNav = function () {
+        this.nav_len = [];
+        this.setNavArr();
+        this.fixTitle();
+        // this.navImg();
+    };
+    scrollNav.prototype = {
+        setNavArr:function () {
+        var img_show = zy_self.$('.img-show');
+        for(var img of img_show){
+            this.nav_len.push(img.offsetTop);
+        }
+        console.log(this.nav_len);
+
+
+        },
+        navImg:function () {
+            var choose_img = zy_self.$('.choose-img');
+            var scrollTop;
+            var tempIndex ;
+            var that = this;
+            for(var ele of choose_img){
+                ele.addEventListener('click',function () {
+                    tempIndex = this.id.substr(-1,1);
+                    console.log(tempIndex);
+                    document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#img'+tempIndex).offsetTop;
+                });
+            }
+            window.onscroll = function () {
+                for(var ele1 of choose_img){
+                    ele1.className = 'choose-img';
+                }
+                scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
+                console.log(scrollTop);
+                for(var seq = 1; seq < that.nav_len.length; seq++){
+                    if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
+                        choose_img[1].className = 'choose-img hover-red';
+                    }
+                }
+                if(scrollTop < that.nav_len[0]){
+                    choose_img[0].className = 'choose-img hover-red';
+                }
+            };
+        },
+        fixTitle:function () {
+            var will_fixed = zy_self.$('#will-fixed'),
+              head_addCar = zy_self.$('#head-addCar'),
+              h1 = zy_self.$('#hr-bottom-desnav'),
+              h2 = zy_self.$('#hr-bottom-desnav2'),
+              choose_img = zy_self.$('.choose-img'),
+              tempIndex ,
+              that = this,
+              scrollTop;
+            for(var ele of choose_img){
+                ele.addEventListener('click',function () {
+                    tempIndex = this.id.substr(-1,1);
+                    console.log(tempIndex);
+                    document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#img'+tempIndex).offsetTop;
+                });
+            }
+            
+            window.onscroll = function () {
+                scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
+                if(scrollTop > 600 ){
+                    will_fixed.style.cssText = 'position: fixed;top:0px;left:0px;width:100%;min-width:980px';
+                    head_addCar.style.cssText = 'display:block';
+                    h2.style.cssText = 'display:block';
+                    h1.style.cssText = 'display:none';
+                }else{
+                    will_fixed.style.cssText = 'position: relative';
+                    head_addCar.style.cssText = 'display:none';
+                    h1.style.cssText = 'display:block';
+                    h2.style.cssText = 'display:none';
+                }
+                for(var ele1 of choose_img){
+                    ele1.className = 'choose-img';
+                }
+                //由于评论和提问未实现，因此，滚动自动定位功能后面有瑕疵。
+                for(var seq = 1; seq < that.nav_len.length; seq++){
+                    if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
+                        choose_img[seq].className = 'choose-img hover-red';
+                    }
+                }
+                if(scrollTop < that.nav_len[0]){
+                    choose_img[0].className = 'choose-img hover-red';
+                }
+            };
+            }
+        },
+
+    new scrollNav();
 });

@@ -6,11 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="015fb107-749f-4583-883a-965ef2419cf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/css/buypage.css" afterPath="$PROJECT_DIR$/commenFunction/css/buypage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/html/buyPage.html" afterPath="$PROJECT_DIR$/commenFunction/html/buyPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/js/buypage.js" afterPath="$PROJECT_DIR$/commenFunction/js/buypage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/js/main.js" afterPath="$PROJECT_DIR$/commenFunction/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commenFunction/main.js" afterPath="$PROJECT_DIR$/commenFunction/main.js" />
     </list>
     <ignored path="fanke.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,13 +32,12 @@
       <file leaf-file-name="buyPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commenFunction/html/buyPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="32" column="30" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="30" />
+            <state relative-caret-position="308">
+              <caret line="195" column="43" selection-start-line="195" selection-start-column="43" selection-end-line="195" selection-end-column="43" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
@@ -50,8 +47,8 @@
       <file leaf-file-name="buypage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commenFunction/css/buypage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            <state relative-caret-position="375">
+              <caret line="152" column="30" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -60,8 +57,8 @@
       <file leaf-file-name="buypage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commenFunction/js/buypage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+            <state relative-caret-position="490">
+              <caret line="513" column="46" selection-start-line="513" selection-start-column="46" selection-end-line="513" selection-end-column="46" />
               <folding>
                 <element signature="e#122#256#0" expanded="false" />
                 <element signature="e#279#2575#0" expanded="false" />
@@ -110,11 +107,11 @@
         <option value="$PROJECT_DIR$/commenFunction/buyPage.html" />
         <option value="$PROJECT_DIR$/commenFunction/index.html" />
         <option value="$PROJECT_DIR$/commenFunction/html/index.html" />
-        <option value="$PROJECT_DIR$/commenFunction/html/buyPage.html" />
         <option value="$PROJECT_DIR$/commenFunction/js/main.js" />
         <option value="$PROJECT_DIR$/commenFunction/main.js" />
-        <option value="$PROJECT_DIR$/commenFunction/js/buypage.js" />
+        <option value="$PROJECT_DIR$/commenFunction/html/buyPage.html" />
         <option value="$PROJECT_DIR$/commenFunction/css/buypage.css" />
+        <option value="$PROJECT_DIR$/commenFunction/js/buypage.js" />
       </list>
     </option>
   </component>
@@ -308,12 +305,12 @@
       <workItem from="1480057946537" duration="101000" />
       <workItem from="1480896277735" duration="25898000" />
       <workItem from="1480982354342" duration="28666000" />
-      <workItem from="1481069417563" duration="4720000" />
+      <workItem from="1481069417563" duration="13688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140960000" />
+    <option name="totallyTimeSpent" value="149928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -447,11 +444,6 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/images/all-icons.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/css/carousel.css">
@@ -671,32 +663,36 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commenFunction/css/buypage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/commenFunction/images/all-icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/html/buyPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="30" />
+        <state relative-caret-position="308">
+          <caret line="195" column="43" selection-start-line="195" selection-start-column="43" selection-end-line="195" selection-end-column="43" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/commenFunction/css/buypage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="152" column="30" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/commenFunction/js/buypage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+        <state relative-caret-position="490">
+          <caret line="513" column="46" selection-start-line="513" selection-start-column="46" selection-end-line="513" selection-end-column="46" />
           <folding>
             <element signature="e#122#256#0" expanded="false" />
             <element signature="e#279#2575#0" expanded="false" />
