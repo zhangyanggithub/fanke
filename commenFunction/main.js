@@ -177,7 +177,7 @@ require(['zy.js'],function(zy) {
       },
       focus:function () {
           var searchBox = zy_self.$('#search-text');
-          searchBox.addEventListener('mouseenter',function () {
+          searchBox.addEventListener('mouseover',function () {
               searchBox.select();
           });
       },
@@ -192,8 +192,11 @@ require(['zy.js'],function(zy) {
           searchBox.addEventListener('mouseup',function () {
               userEvent();
           });
-          searchBox.addEventListener('mouseover',function () {
+          searchBox.addEventListener('mousemove',function () {
               inputItem.style.display = 'block';
+              userEvent();
+          });
+          searchBox.addEventListener('mouseover',function () {
               userEvent();
           });
           function userEvent() {
@@ -222,13 +225,14 @@ require(['zy.js'],function(zy) {
             xml.send(null);
         },
       setAjaxData:function (s) {
+          var html = [];
+          html.length = 0;
           if(s){
               var s1=s.split('[')[1],
                   s2= s1.split(']')[0],
                   s3 = s2.split('},{'),
                   s4 = [],
                   template = '<li><a href="##">{usertext}</a><span class="g-number">约{number}条</span></li>',
-                  html = [],
                   inputItem = zy_self.$('#input-item'),
                   i = 0,
                   len = this.ajaxData.length,
@@ -243,9 +247,10 @@ require(['zy.js'],function(zy) {
                   this.ajaxData.push(str2[3]+''+str2[9]);
                   this.ajaxData2.push(str2[6].substr(1).split(',')[0]);
               }
-              html.length = 0;
-              inputItem.innerHTML = '';
-              for(; i<len; i++){
+             for(; i<len; i++){
+                  if(this.ajaxData2[i] < 1){
+                      continue;
+                  }
                   str = template.replace(/\{usertext\}/, this.ajaxData[i])
                                 .replace(/\{number\}/,this.ajaxData2[i]);
                   html.push(str);
@@ -258,12 +263,21 @@ require(['zy.js'],function(zy) {
           var inputItem = zy_self.$('#input-item');
           var searchBox = zy_self.$('#search-text');
           var liItem = inputItem.children;
-          for(var li of liItem){
+         /* for(var li of liItem){
               li.addEventListener('mouseenter',function () {
                   console.log(this.getElementsByTagName('a')[0].innerHTML);
                   searchBox.value = this.getElementsByTagName('a')[0].innerHTML;
               });
-          }
+          }*/
+          inputItem.addEventListener('mousemove',function (e) {
+              var ele = e.target || e.srcElement;
+              if(ele.tagName === 'LI'){
+                  searchBox.value = ele.getElementsByTagName('a')[0].innerHTML;
+                  ele.addEventListener('click',function () {
+                      inputItem.style.display = 'none';
+                  });
+              }
+          });
           inputItem.addEventListener('mouseleave',function () {
               this.style.display = 'none';
           });

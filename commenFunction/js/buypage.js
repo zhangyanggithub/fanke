@@ -139,11 +139,11 @@ require(['../js/zy.js'],function(zy) {
                     i = 0,
                     len = this.ajaxData.length,
                     str;
-                for(var str0 of s3){
-                    s4.push(str0.split('"'));
+                for(var str0 = 0; str0<s3.length; s3++){
+                    s4.push(s3[str0].split('"'));
                 }
-                for(var str2 of s4){
-                    if(str2[9] == 'categoryid'){
+                for(var str2 = 0; str0<s4.length; s4++){
+                    if(s4[str2][9] == 'categoryid'){
                         str2[9] = '';
                     }
                     this.ajaxData.push(str2[3]+''+str2[9]);
@@ -162,17 +162,16 @@ require(['../js/zy.js'],function(zy) {
         userItemHover:function () {
             var inputItem = zy_self.$('#input-item');
             var searchBox = zy_self.$('#search-text');
-            var liItem = inputItem.children;
-            for(var li of liItem){
-                li.addEventListener('mouseenter',function () {
-                    console.log(this.getElementsByTagName('a')[0].innerHTML);
-                    searchBox.value = this.getElementsByTagName('a')[0].innerHTML;
+            inputItem.addEventListener('mousemove',function (e) {
+                var ele = e.target || e.srcElement;
+                if(ele.tagName === 'LI'){
+                    searchBox.value = ele.getElementsByTagName('a')[0].innerHTML;
+                }
                 });
-            }
+
             inputItem.addEventListener('mouseleave',function () {
                 this.style.display = 'none';
             });
-
         },
         gotop:function (speed) {
             var topEle = zy_self.$('#to-top'),
@@ -266,20 +265,26 @@ require(['../js/zy.js'],function(zy) {
         },
         changeCommon:function () {
             var little_pic = zy_self.$(".left-select-pic");
+            var little_pic_all = zy_self.$("#left-pic-select");
             var leftIndex;
             var colorIndex;
-            for(var ele of little_pic){
+            /*for(var ele of little_pic){
                 ele.addEventListener("mouseenter",function () {
-                   /* for(var elein of little_pic){
-                      elein.style['border'] = "1px solid #B4B4B4;";
-                    }
-                    this.style['border'] = "1px solid #a10000;";*/
                     leftIndex = this.getAttribute("index").substr(-1,1);
                     colorIndex = zy_self.$('.active-color')[0].parentNode.parentNode.getAttribute('index').substr(-1,1);
                     zy_self.$('#small').src = "../images/common-pic-"+colorIndex+"-"+leftIndex+".jpg";
                     zy_self.$('#big').src = "../images/big-pic-"+colorIndex+"-"+leftIndex+".jpg";
                 });
-            }
+            }*/
+            little_pic_all.addEventListener("mousemove",function (e) {
+                var mouseEle = e.srcElement || e.target;
+                if(mouseEle.tagName === 'LI') {
+                    leftIndex = mouseEle.getAttribute("index").substr(-1, 1);
+                    colorIndex = zy_self.$('.active-color')[0].parentNode.parentNode.getAttribute('index').substr(-1, 1);
+                    zy_self.$('#small').src = "../images/common-pic-" + colorIndex + "-" + leftIndex + ".jpg";
+                    zy_self.$('#big').src = "../images/big-pic-" + colorIndex + "-" + leftIndex + ".jpg";
+                }
+                });
         },
         mouseEvent:function () {
             var small_img = zy_self.$("#common-pic");
@@ -355,22 +360,24 @@ require(['../js/zy.js'],function(zy) {
                 ulChild[i].addEventListener('click',function () {
                     currentIndex = this.getAttribute('index').substr(-1,1);
                     img.src = '../images/left-pic-select-'+currentIndex+'.jpg';
-                    len = Math.floor(img.height/68);
-                    for (var i = 0; i < len; i++) {
-                        tempH = tempList.replace(/\{index\}/,i);
-                        html.push(tempH);
-                    }
-                    left_pic_select.innerHTML = html.join('');
-                    html.length = 0;
-                    leftList = left_pic_select.children;
-                    for(var j = 0; j < len; j++){
-                        leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
-                    }
+                    img.onload = function () {
+                        len = Math.floor(img.height/68);
+                        for (var i = 0; i < len; i++) {
+                            tempH = tempList.replace(/\{index\}/,i);
+                            html.push(tempH);
+                        }
+                        left_pic_select.innerHTML = html.join('');
+                        html.length = 0;
+                        leftList = left_pic_select.children;
+                        for(var j = 0; j < len; j++){
+                            leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
+                        }
 
-                    zy_self.$('#small').src = "../images/common-pic-"+currentIndex+"-0"+".jpg";
-                    zy_self.$('#big').src = "../images/big-pic-"+currentIndex+"-0"+".jpg";
-                    that.changeCommon();
-                    that.leftHoverEvent();
+                        zy_self.$('#small').src = "../images/common-pic-"+currentIndex+"-0"+".jpg";
+                        zy_self.$('#big').src = "../images/big-pic-"+currentIndex+"-0"+".jpg";
+                        that.changeCommon();
+                        that.leftHoverEvent();
+                    };
                 });
             }
 
@@ -438,7 +445,6 @@ require(['../js/zy.js'],function(zy) {
         this.nav_len = [];
         this.setNavArr();
         this.fixTitle();
-        // this.navImg();
     };
     scrollNav.prototype = {
         setNavArr:function () {
@@ -446,37 +452,6 @@ require(['../js/zy.js'],function(zy) {
         for(var img of img_show){
             this.nav_len.push(img.offsetTop);
         }
-        console.log(this.nav_len);
-
-
-        },
-        navImg:function () {
-            var choose_img = zy_self.$('.choose-img');
-            var scrollTop;
-            var tempIndex ;
-            var that = this;
-            for(var ele of choose_img){
-                ele.addEventListener('click',function () {
-                    tempIndex = this.id.substr(-1,1);
-                    console.log(tempIndex);
-                    document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#img'+tempIndex).offsetTop;
-                });
-            }
-            window.onscroll = function () {
-                for(var ele1 of choose_img){
-                    ele1.className = 'choose-img';
-                }
-                scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
-                console.log(scrollTop);
-                for(var seq = 1; seq < that.nav_len.length; seq++){
-                    if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
-                        choose_img[1].className = 'choose-img hover-red';
-                    }
-                }
-                if(scrollTop < that.nav_len[0]){
-                    choose_img[0].className = 'choose-img hover-red';
-                }
-            };
         },
         fixTitle:function () {
             var will_fixed = zy_self.$('#will-fixed'),
@@ -490,11 +465,9 @@ require(['../js/zy.js'],function(zy) {
             for(var ele of choose_img){
                 ele.addEventListener('click',function () {
                     tempIndex = this.id.substr(-1,1);
-                    console.log(tempIndex);
                     document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#img'+tempIndex).offsetTop;
                 });
             }
-            
             window.onscroll = function () {
                 scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
                 if(scrollTop > 600 ){
@@ -514,12 +487,12 @@ require(['../js/zy.js'],function(zy) {
                 //由于评论和提问未实现，因此，滚动自动定位功能后面有瑕疵。
                 for(var seq = 1; seq < that.nav_len.length; seq++){
                     if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
-                        choose_img[seq].className = 'choose-img hover-red';
+                        choose_img[seq -1].className = 'choose-img hover-red';
                     }
                 }
-                if(scrollTop < that.nav_len[0]){
+                /*if(scrollTop < that.nav_len[1]){
                     choose_img[0].className = 'choose-img hover-red';
-                }
+                }*/
             };
             }
         },

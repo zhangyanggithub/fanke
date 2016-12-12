@@ -339,3 +339,48 @@ a:active{
 #style span:last-child a:hover{
     color: #a10000;
 }
+#hr-bottom-desnav2{
+    margin:3px 0 0 0;
+}
+#comments{
+    margin-top: 70px;
+}
+#recommend{
+    font-size: 13px;
+    width:190px;
+    float: left;
+    border:1px solid #bbbbbb;
+}
+#recommend p{
+    height:40px;
+}
+#recommend a{
+    display: block;
+    width: 160px;
+    color: #808080;
+    margin-left: 15px;
+}
+#recommend li{
+    border-top: 1px solid #bbbbbb;
+    text-align: center;
+}
+#recommend img{
+    width: 160px;
+    height:160px;
+}
+#recommend  span{
+    display: block;
+    width: 130px;
+    margin-left: 15px;
+}
+#recommend p{
+    color: #a10000;
+    line-height: 40px;
+    font-weight: bold;
+}
+#recommend p:first-child{
+    font: inherit;
+    line-height: 40px;
+    color: #333333;
+    margin-left: 15px;
+}
