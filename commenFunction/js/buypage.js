@@ -66,7 +66,7 @@ require(['../js/zy.js'],function(zy) {
         this.openIndexPage();
         this.Intellisense();
         this.userItemHover();
-        this.gotop(50);
+        this.goto(50);
     };
     pieces.prototype = {
         openIndexPage:function () {
@@ -173,12 +173,26 @@ require(['../js/zy.js'],function(zy) {
                 this.style.display = 'none';
             });
         },
-        gotop:function (speed) {
+        goto:function (speed) {
             var topEle = zy_self.$('#to-top'),
-                minH = 600,
+                minH = 800,
                 timer = null,
                 flag = true;
-            window.onscroll = function () {
+            window.addEventListener('scroll',function () {
+                var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+                if(scrollTop > minH){
+                    // speed = 0;
+                    topEle.style.display = 'block';
+                }
+                if(scrollTop < minH){
+                    topEle.style.display = 'none';
+                }
+                if(!flag){
+                    clearInterval(timer);
+                }
+                flag = false;
+            });
+           /* window.onscroll = function () {
                 var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
                 if(scrollTop > minH){
                     speed = 0;
@@ -192,7 +206,7 @@ require(['../js/zy.js'],function(zy) {
                 }
                 flag = false;
 
-            };
+            };*/
             topEle.addEventListener('click',function () {
                 timer = setInterval(function () {
                     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop ;
@@ -202,7 +216,7 @@ require(['../js/zy.js'],function(zy) {
                     if(scrollTop <= 0){
                         clearInterval(timer);
                     }
-                },10);
+                },70);
             });
         },
     };
@@ -245,17 +259,19 @@ require(['../js/zy.js'],function(zy) {
                     zy_self.get_nxt(ele).className = 'active-color';
                     colorIndex = ele.parentNode.parentNode.getAttribute('index').substr(-1,1);
                     img.src = '../images/left-pic-select-'+colorIndex+'.jpg';
-                    len = Math.floor(img.height/68);
-                    for (var i = 0; i < len; i++) {
-                        tempH = tempList.replace(/\{index\}/,i);
-                        html.push(tempH);
-                    }
-                    left_pic_select.innerHTML = html.join('');
-                    html.length = 0;
-                    leftList = left_pic_select.children;
-                    for(var j = 0; j < len; j++){
-                        leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
-                    }
+                    img.onload = function () {
+                        len = Math.floor(img.height/68);
+                        for (var i = 0; i < len; i++) {
+                            tempH = tempList.replace(/\{index\}/,i);
+                            html.push(tempH);
+                        }
+                        left_pic_select.innerHTML = html.join('');
+                        html.length = 0;
+                        leftList = left_pic_select.children;
+                        for(var j = 0; j < len; j++){
+                            leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
+                        }
+                    };
                     break;
                 }
             }
@@ -293,12 +309,10 @@ require(['../js/zy.js'],function(zy) {
             var big = zy_self.$("#big");
             var big_pic = zy_self.$("#big-pic");
             small_img.addEventListener("mouseout",function () {
-                mask.style.display = "none";
-                big_pic.style.display = "none";
+                big_pic.style.display = mask.style.display = "none";
             });
             small_img.addEventListener("mouseenter",function () {
-                mask.style.display = "block";
-                big_pic.style.display = "block";
+                big_pic.style.display = mask.style.display = "block";
             });
             small_img.addEventListener("mousemove",function (event) {
                 var e = event || window.event;
@@ -358,6 +372,7 @@ require(['../js/zy.js'],function(zy) {
             var that = this;
             for(var i = 0; i<ulChild.length; i++){
                 ulChild[i].addEventListener('click',function () {
+                    zy_self.$('#common-pic').style.marginLeft = '80px';
                     currentIndex = this.getAttribute('index').substr(-1,1);
                     img.src = '../images/left-pic-select-'+currentIndex+'.jpg';
                     img.onload = function () {
@@ -371,12 +386,29 @@ require(['../js/zy.js'],function(zy) {
                         leftList = left_pic_select.children;
                         for(var j = 0; j < len; j++){
                             leftList[j].style.cssText = 'background:url('+ img.src+') no-repeat 0 '+68*j*-1+'px';
+                            if(len>4){
+                                leftList[j].style.marginBottom = '10px';
+                            }
                         }
-
+                        if(len>5){
+                            zy_self.$('.to-page')[1].style.cssText=zy_self.$('.to-page')[0].style.cssText='display:block';
+                            /* for(var j1 = 0; j1 < len; j1++){
+                                leftList[j1].style.position = 'absolute';
+                                leftList[j1].style.left = '0px;';
+                                leftList[j1].style.top = j1*75+14+'px';
+                                if(j1 == 5){
+                                    leftList[j1].className = 'left-bottom-pic left-select-pic red-border';
+                                }
+                            }*/
+                        }else{
+                            left_pic_select.style.marginTop = '12px';
+                            zy_self.$('.to-page')[1].style.cssText=zy_self.$('.to-page')[0].style.cssText='display:none';
+                        }
                         zy_self.$('#small').src = "../images/common-pic-"+currentIndex+"-0"+".jpg";
                         zy_self.$('#big').src = "../images/big-pic-"+currentIndex+"-0"+".jpg";
                         that.changeCommon();
                         that.leftHoverEvent();
+                        that.triangleButClick();
                     };
                 });
             }
@@ -439,6 +471,27 @@ require(['../js/zy.js'],function(zy) {
             }
             }
         },
+        triangleButClick:function () {
+            var up = zy_self.$('#last-page'),
+                down = zy_self.$('#next-page'),
+                next = zy_self.$('#next-page'),
+                left_pic_select = zy_self.$('#left-pic-select');
+            mouseEvent(up,'mousedown',-310,down);
+            mouseEvent(down,'mousedown',12,up);
+            function mouseEvent(ele,event,margin,pro) {
+                ele.addEventListener(event,function () {
+                    if(ele == up){
+                        this.style.borderBottomColor = '#B8B8B8';
+                        pro.style.borderTopColor = '#666666';
+                    }else{
+                        this.style.borderTopColor = '#B8B8B8';
+                        pro.style.borderBottomColor = '#666666';
+                    }
+                    left_pic_select.style.marginTop = margin+'px';
+
+                });
+            }
+        },
     };
     new picShow();
     var scrollNav = function () {
@@ -468,7 +521,7 @@ require(['../js/zy.js'],function(zy) {
                     document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#img'+tempIndex).offsetTop;
                 });
             }
-            window.onscroll = function () {
+            window.addEventListener('scroll',function () {
                 scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
                 if(scrollTop > 600 ){
                     will_fixed.style.cssText = 'position: fixed;top:0px;left:0px;width:100%;min-width:980px';
@@ -490,10 +543,33 @@ require(['../js/zy.js'],function(zy) {
                         choose_img[seq -1].className = 'choose-img hover-red';
                     }
                 }
-                /*if(scrollTop < that.nav_len[1]){
+            });
+           /* window.onscroll = function () {
+                scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
+                if(scrollTop > 600 ){
+                    will_fixed.style.cssText = 'position: fixed;top:0px;left:0px;width:100%;min-width:980px';
+                    head_addCar.style.cssText = 'display:block';
+                    h2.style.cssText = 'display:block';
+                    h1.style.cssText = 'display:none';
+                }else{
+                    will_fixed.style.cssText = 'position: relative';
+                    head_addCar.style.cssText = 'display:none';
+                    h1.style.cssText = 'display:block';
+                    h2.style.cssText = 'display:none';
+                }
+                for(var ele1 of choose_img){
+                    ele1.className = 'choose-img';
+                }
+                //由于评论和提问未实现，因此，滚动自动定位功能后面有瑕疵。
+                for(var seq = 1; seq < that.nav_len.length; seq++){
+                    if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
+                        choose_img[seq -1].className = 'choose-img hover-red';
+                    }
+                }
+                /!*if(scrollTop < that.nav_len[1]){
                     choose_img[0].className = 'choose-img hover-red';
-                }*/
-            };
+                }*!/
+            };*/
             }
         },
 

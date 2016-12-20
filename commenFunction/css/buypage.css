@@ -62,23 +62,66 @@
     margin: 10px;
 }
 #select-area{
+    overflow: hidden;
     margin-top: 20px;
     height:426px;
+    position: relative;
 }
 #pic-left{
     float: left;
-    position: relative;
 }
 #left-pic-select{
+    -webkit-transition: margin-top .5s;
+    -moz-transition: margin-top .5s;
+    -ms-transition: margin-top .5s;
+    -o-transition: margin-top .5s;
+    transition: margin-top .5s;
     width:70px;
     box-sizing: border-box;
     float: left;
-    max-height: 400px;
     overflow: hidden;
+    margin-top: 12px;
+}
+.to-page{
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    position: absolute;
+    cursor: pointer;
+    left: 30px;
+    border:7px solid transparent;
+    display: none;
+    z-index: 3;
+}
+.left-bottom-pic{
+    display: none;
+}
+#last-page{
+    border-bottom-color: #666;
+    top: -7px;
+ }
+#next-page{
+    border-top-color: #666;
+    bottom: 6px;
+}
+#control-left-move{
+    float: left;
+    width: 70px;
+    height: 412px;
+    overflow: hidden;
+}
+#last-page:hover{
+    border-bottom-color: #a10000;
+}
+#next-page:hover{
+    border-top-color: #a10000;
 }
 .left-select-pic{
     border:1px solid #B4B4B4;
     height:68px;
+    width:68px;
     cursor: pointer;
     margin-bottom: 11px;
 }
@@ -101,7 +144,7 @@
     cursor: crosshair;
     width:400px;
     height:400px;
-    float: left;
+    float: right;
     border:1px solid #e5e6e6;
     margin-left: 80px;
     position: relative;
@@ -151,6 +194,9 @@
 }
 .hover-red a{
     color: #A10000 !important;
+}
+#gotop{
+    z-index: 2;
 }
 .hr{
     border-bottom: 1px solid #e5e6e6;
@@ -340,6 +386,7 @@ a:active{
     color: #a10000;
 }
 #hr-bottom-desnav2{
+    display: none;
     margin:3px 0 0 0;
 }
 #comments{
