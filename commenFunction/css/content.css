@@ -104,7 +104,6 @@ img{
     height:275px;
 }
 #help{
-    display: none;
     width: 1198px;
     padding-top: 20px;
     height: 234px;
@@ -114,6 +113,7 @@ img{
     font-family: "Microsoft YaHei";
     color: #727171;
     position: relative;
+    background-color: #FFFFFF;
 }
 .fl{
     width: 371px;

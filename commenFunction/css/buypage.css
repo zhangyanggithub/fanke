@@ -260,6 +260,9 @@ a:active{
     overflow: hidden;
     margin-left:41px;
 }
+#size a{
+    color:#000;
+}
 #size li{
     cursor: pointer;
     width: 13px;
@@ -391,43 +394,118 @@ a:active{
 }
 #comments{
     margin-top: 70px;
+    font-size: 12px;
 }
-#recommend{
+#recommend2{
     font-size: 13px;
     width:190px;
     float: left;
     border:1px solid #bbbbbb;
 }
-#recommend p{
+#recommend2 p{
     height:40px;
 }
-#recommend a{
+#recommend2 a{
     display: block;
     width: 160px;
     color: #808080;
     margin-left: 15px;
 }
-#recommend li{
+#recommend2 li{
     border-top: 1px solid #bbbbbb;
     text-align: center;
 }
-#recommend img{
+#recommend2 img{
     width: 160px;
     height:160px;
 }
-#recommend  span{
+#recommend2  span{
     display: block;
     width: 130px;
     margin-left: 15px;
 }
-#recommend p{
+#recommend2 p{
     color: #a10000;
     line-height: 40px;
     font-weight: bold;
 }
-#recommend p:first-child{
+#recommend2 p:first-child{
     font: inherit;
     line-height: 40px;
     color: #333333;
     margin-left: 15px;
+}
+
+#comments-list-content{
+    color:#333;
+}
+#comments-list{
+    width:980px;
+    float: right;
+    border:1px solid #bbbbbb;
+}
+#comments-list-head{
+    height:40px;
+    border-bottom:1px solid #bbbbbb;
+}
+#comments-list-head li{
+    float: left;
+    margin-left: 25px;
+    line-height: 40px;
+}
+.sum-desc{
+    float: right;
+    width: 100px;
+    line-height: 20px;
+    height: 112px;
+}
+#want-comments{
+    float: right !important;
+    background-color: #d46a6a;
+    margin: 3px 30px 0 0;
+    width: 120px;
+    height: 33px;
+    color: #FFF;
+    text-align: center;
+    line-height: 33px !important;
+}
+.content{
+    float: left;
+    width: 780px;
+    margin-left: 25px;
+    line-height: 20px;
+    padding: 40px 0 30px 0;
+    border-bottom: 1px dotted #b4b4b4;
+    border-right: 1px dotted #b4b4b4;
+}
+.vip{
+    border-bottom: 1px dotted #b4b4b4;
+    text-align: center;
+    width: 165px;
+    height: 112px;
+    margin-top: 70px;
+    float: left;
+}
+.vip-id{
+    line-height: 26px;
+}
+.user-growth{
+    background: url("../images/userlevelgrowth.jpg") no-repeat;
+    display: inline-block;
+    height: 14px;
+    width: 42px;
+}
+.release-date{
+    color: #b4b4b4;
+    margin-top: 12px;
+}
+.size-content{
+    margin-top: 12px;
+}
+.user-content{
+    float: left;
+    width: 610px;
+}
+#comments-list-content ul li{
+    overflow: hidden;
 }

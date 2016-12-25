@@ -392,14 +392,6 @@ require(['../js/zy.js'],function(zy) {
                         }
                         if(len>5){
                             zy_self.$('.to-page')[1].style.cssText=zy_self.$('.to-page')[0].style.cssText='display:block';
-                            /* for(var j1 = 0; j1 < len; j1++){
-                                leftList[j1].style.position = 'absolute';
-                                leftList[j1].style.left = '0px;';
-                                leftList[j1].style.top = j1*75+14+'px';
-                                if(j1 == 5){
-                                    leftList[j1].className = 'left-bottom-pic left-select-pic red-border';
-                                }
-                            }*/
                         }else{
                             left_pic_select.style.marginTop = '12px';
                             zy_self.$('.to-page')[1].style.cssText=zy_self.$('.to-page')[0].style.cssText='display:none';
