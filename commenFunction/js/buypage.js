@@ -230,6 +230,7 @@ require(['../js/zy.js'],function(zy) {
         this.selectedShow();
         this.changeCommon();
         this.leftHoverEvent();
+        this.carOpen();
     };
     picShow.prototype = {
         leftHoverEvent:function () {
@@ -484,6 +485,17 @@ require(['../js/zy.js'],function(zy) {
                 });
             }
         },
+        carOpen:function () {
+            var car = zy_self.$('#added-car'),
+                addCar = zy_self.$('#addcar'),
+                closeIcon = zy_self.$('#car-close');
+            addCar.addEventListener('click',function () {
+                car.style.display = 'block';
+            });
+            closeIcon.addEventListener('click',function () {
+                car.style.display = 'none';
+            });
+        }
     };
     new picShow();
     var scrollNav = function () {
@@ -510,7 +522,7 @@ require(['../js/zy.js'],function(zy) {
             for(var ele of choose_img){
                 ele.addEventListener('click',function () {
                     tempIndex = this.id.substr(-1,1);
-                    document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#img'+tempIndex).offsetTop;
+                    document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#select'+tempIndex).offsetTop;
                 });
             }
             window.addEventListener('scroll',function () {
@@ -529,41 +541,37 @@ require(['../js/zy.js'],function(zy) {
                 for(var ele1 of choose_img){
                     ele1.className = 'choose-img';
                 }
-                //由于评论和提问未实现，因此，滚动自动定位功能后面有瑕疵。
                 for(var seq = 1; seq < that.nav_len.length; seq++){
                     if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
                         choose_img[seq -1].className = 'choose-img hover-red';
+                    }
+                    if(scrollTop > that.nav_len[that.nav_len.length-1]){
+                        choose_img[choose_img.length -1].className = 'choose-img hover-red';
                     }
                 }
             });
-           /* window.onscroll = function () {
-                scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
-                if(scrollTop > 600 ){
-                    will_fixed.style.cssText = 'position: fixed;top:0px;left:0px;width:100%;min-width:980px';
-                    head_addCar.style.cssText = 'display:block';
-                    h2.style.cssText = 'display:block';
-                    h1.style.cssText = 'display:none';
-                }else{
-                    will_fixed.style.cssText = 'position: relative';
-                    head_addCar.style.cssText = 'display:none';
-                    h1.style.cssText = 'display:block';
-                    h2.style.cssText = 'display:none';
-                }
-                for(var ele1 of choose_img){
-                    ele1.className = 'choose-img';
-                }
-                //由于评论和提问未实现，因此，滚动自动定位功能后面有瑕疵。
-                for(var seq = 1; seq < that.nav_len.length; seq++){
-                    if(that.nav_len[seq - 1] <= scrollTop && scrollTop <= that.nav_len[seq]){
-                        choose_img[seq -1].className = 'choose-img hover-red';
-                    }
-                }
-                /!*if(scrollTop < that.nav_len[1]){
-                    choose_img[0].className = 'choose-img hover-red';
-                }*!/
-            };*/
             }
         },
-
     new scrollNav();
+    var commentsChoose = function () {
+        this.chooseType();
+    };
+    commentsChoose.prototype = {
+        chooseType:function () {
+            var commntsFont = zy_self.$('#all-comments'),
+                commntsPic = zy_self.$('#pic-comments'),
+                commentsListContent = zy_self.$('#comments-list-content'),
+                picCommentsList = zy_self.$('#pic-comments-list');
+            picCommentsList.style.display = 'none';
+            commntsFont.addEventListener('click',function () {
+                picCommentsList.style.display = 'none';
+                commentsListContent.style.display = 'block';
+            });
+            commntsPic.addEventListener('click',function () {
+                commentsListContent.style.display = 'none';
+                picCommentsList.style.display = 'block';
+            });
+        },
+    }
+    new commentsChoose();
 });

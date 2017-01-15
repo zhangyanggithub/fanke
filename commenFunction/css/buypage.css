@@ -29,7 +29,6 @@
     overflow: hidden;
 }
 #will-fixed{
-    /*z-index: 2;*/
     background-color: #FFF;
 }
 #desc-nav h2{
@@ -45,9 +44,6 @@
     font-weight: bold;
     font-family: "Microsoft YaHei";
  }
-/*#desc-nav ul{
-    margin-left: 672px;
-}*/
 #desc-nav a{
     line-height: 33px;
     font-family: "Microsoft YaHei UI";
@@ -128,13 +124,6 @@
 .red-border{
     border:1px solid #a10000;
 }
-/*.left-select-pic:first-child{
-    border:1px solid #a10000;
-    background: url("../images/left-pic-select-6.jpg") no-repeat 0 0;
-}
-.left-select-pic:last-child{
-    background: url("../images/left-pic-select-6.jpg") no-repeat 0 -68px;
-}*/
 #right-area-select{
     float: left;
     margin-left:80px;
@@ -392,9 +381,10 @@ a:active{
     display: none;
     margin:3px 0 0 0;
 }
-#comments{
+#comments-area{
     margin-top: 70px;
     font-size: 12px;
+    overflow: hidden;
 }
 #recommend2{
     font-size: 13px;
@@ -402,8 +392,10 @@ a:active{
     float: left;
     border:1px solid #bbbbbb;
 }
-#recommend2 p{
-    height:40px;
+#recommend-head-area{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 #recommend2 a{
     display: block;
@@ -435,11 +427,10 @@ a:active{
     color: #333333;
     margin-left: 15px;
 }
-
 #comments-list-content{
     color:#333;
 }
-#comments-list{
+.whole-desc{
     width:980px;
     float: right;
     border:1px solid #bbbbbb;
@@ -459,7 +450,7 @@ a:active{
     line-height: 20px;
     height: 112px;
 }
-#want-comments{
+.want-write{
     float: right !important;
     background-color: #d46a6a;
     margin: 3px 30px 0 0;
@@ -468,8 +459,9 @@ a:active{
     color: #FFF;
     text-align: center;
     line-height: 33px !important;
+    cursor: pointer;
 }
-.content{
+.content-detail{
     float: left;
     width: 780px;
     margin-left: 25px;
@@ -508,4 +500,194 @@ a:active{
 }
 #comments-list-content ul li{
     overflow: hidden;
+}
+.page{
+    float: right;
+    padding:20px;
+}
+.page li{
+    padding: 0 13px 0 0px;
+    float: left;
+    list-style: none;
+}
+.page li a{
+    color:#3e3a39;
+}
+.page li a:hover{
+    color:#a10000;
+}
+.page .active-page{
+    font-weight:bold;
+}
+#pic-comments-list .no-pic-comments{
+    margin: 10px auto;
+    text-align: center;
+    color: #999;
+}
+#select7{
+    margin-top: 20px;
+}
+#lasted-QA{
+    float: left;
+    margin-left: 25px;
+    line-height: 40px;
+    font-weight: bold;
+}
+#AQ-list ul{
+    margin: 0 25px;
+}
+.Q,.A{
+    margin-top: 1px;
+    float: left;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    background-color: #a10000;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+.A{
+    background-color: #d46a6a;
+}
+.now-time,.to-reply{
+    color:#999;
+    margin:5px;
+    float: right;
+    display: inline-block;
+}
+.Q-desc {
+    float: left;
+    width: 766px;
+    line-height: 23px;
+}
+.A-desc {
+    display: inline;
+    width: 766px;
+    line-height: 23px;
+    color:#999;
+}
+.Q-div{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#AQ-head{
+    border-bottom: 1px solid #bbbbbb;
+}
+.QA-list {
+    margin: 20px 0;
+    border-bottom: thin dotted #b4b4b4;
+}
+.to-reply{
+    cursor: pointer;
+}
+#added-car{
+    position: absolute;
+    width: 500px;
+    border: 1px solid #b81b22;
+    left: 671px;
+    top: 70px;
+    background-color: #FFF;
+    z-index: 3;
+    display: none;
+}
+#added-car h2{
+    padding-left: 20px;
+    font-size:16px;
+    height: 42px;
+    line-height:42px;
+    background: #b81b22;
+    color:#FFF;
+    font-weight: normal;
+    position: relative;
+}
+#car-close{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#added-car .shoppingCar-icon{
+    width: 74px;
+    height: 74px;
+    float: left;
+    margin-right: 20px;
+    background: url("../images/all-icons.png") no-repeat -232px -119px;
+}
+#number-price{
+    font-size:14px;
+    float: left;
+    width: 100px;
+    margin-top: 18px;
+    line-height: 20px;
+    border-left: 1px solid #b81b22;
+    padding-left: 19px;
+}
+#number-price span.goods-all-number,span.goods-all-price{
+    cursor: pointer;
+    color:#b81b22;
+    margin: 0 3px;
+}
+#added-car .choose-action{
+    text-align: center;
+    width:85px;
+    font-size: 14px;
+    font-weight: bold;
+    padding:5px;
+    float: right;
+    margin-top: 23px;
+    cursor: pointer;
+}
+#added-car .choose-action:hover{
+    text-decoration: underline;
+}
+#go-on-shopping{
+    background-color: #e5e6e6;
+    color:#666;
+}
+#go-shoppingCar{
+    background-color: #b81b22;
+    color:#FFF;
+}
+#car-detail{
+    margin: 20px 30px 10px 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    border-bottom: 1px dotted #999;
+}
+#recommond-shopingCar p:first-child {
+    color: #999;
+    padding-left: 20px;
+}
+#car-ul{
+    padding:10px 20px;
+}
+#car-ul li{
+    float: left;
+    margin-right: 20px;
+}
+#car-ul li:last-child{
+    margin-right: 0;
+}
+#car-ul a{
+    color:#666;
+}
+#car-ul a:hover{
+    color:#b81b22;
+}
+#car-ul p{
+    width:74px;
+    text-align: center;
+}
+#car-ul p:last-child{
+    color:#b81b22;
+    margin: 5px 0;
+}
+#car-ul img{
+    width: 74px;
+    height: 74px;
+    border: 1px solid #bdb8b8;
 }
