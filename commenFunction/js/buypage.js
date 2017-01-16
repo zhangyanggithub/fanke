@@ -1,4 +1,9 @@
-require(['../js/zy.js'],function(zy) {
+require.config({
+    paths:{
+        'jquery':'jquery-2.1.1',
+    }
+});
+require(['../js/zy.js','jquery'],function(zy,jquery) {
     'use strict';
     var zy_self = new zy.zy_define();
     var menu = function () {
@@ -223,8 +228,12 @@ require(['../js/zy.js'],function(zy) {
     new pieces();
     var picShow = function () {
         this.color = "藏蓝";
+        this.colorSelectArea='';
+        this.sizeSelectArea='';
+        this.selectRightArea='';
         this.mouseEvent();
         this.addColor();
+        this.carOpnInTop();
         this.selectColor();
         this.selectSize();
         this.selectedShow();
@@ -285,14 +294,6 @@ require(['../js/zy.js'],function(zy) {
             var little_pic_all = zy_self.$("#left-pic-select");
             var leftIndex;
             var colorIndex;
-            /*for(var ele of little_pic){
-                ele.addEventListener("mouseenter",function () {
-                    leftIndex = this.getAttribute("index").substr(-1,1);
-                    colorIndex = zy_self.$('.active-color')[0].parentNode.parentNode.getAttribute('index').substr(-1,1);
-                    zy_self.$('#small').src = "../images/common-pic-"+colorIndex+"-"+leftIndex+".jpg";
-                    zy_self.$('#big').src = "../images/big-pic-"+colorIndex+"-"+leftIndex+".jpg";
-                });
-            }*/
             little_pic_all.addEventListener("mousemove",function (e) {
                 var mouseEle = e.srcElement || e.target;
                 if(mouseEle.tagName === 'LI') {
@@ -358,6 +359,9 @@ require(['../js/zy.js'],function(zy) {
             }
             this.windowLoad();
         },
+        /*
+        * 通过选择颜色定位左边的小图片
+        * */
         selectColor:function () {
             this.selectColorSize('color');
             var ul = zy_self.$('#color').getElementsByTagName('ul')[0];
@@ -405,11 +409,28 @@ require(['../js/zy.js'],function(zy) {
                     };
                 });
             }
+            this.selectRightArea = zy_self.$('#right-area-select').cloneNode(true);
+        },
+        selectColorJ:function () {
+
+        },
+        selectColorOnly:function () {
+            var that = this,
+                ul = zy_self.$('#color').getElementsByTagName('ul')[0];
+            ul.addEventListener(function (e) {
+                var target = e.target || e.srcElement;
+                if(target == 'LI'){
+
+                }
+            });
 
         },
         selectSize:function () {
             this.selectColorSize('size');
         },
+        /*
+        * 选择颜色或size将选中的一项加上红色对勾
+        * */
         selectColorSize:function (id) {
             var ul = zy_self.$('#'+id).getElementsByTagName('ul')[0];
             var ulChild = ul.children;
@@ -423,6 +444,22 @@ require(['../js/zy.js'],function(zy) {
                     this.style.cssText = 'border:1px solid #a10000';
                 });
             }
+        },
+        selectColorSizeJ:function (id) {
+            var ul = jquery('#'+id+' ul'),
+                li = ul.children('li');
+            ul.delegate('li','click',function () {
+
+                   for(var j = 0; j<li.length; j++){
+                            ulChild[j].getElementsByTagName('span')[0].className = '';
+                            ulChild[j].style.cssText = 'border:1px solid #B4B4B4;';
+                        }
+                        this.getElementsByTagName('span')[0].className = 'active-color';
+                        this.style.cssText = 'border:1px solid #a10000';
+
+
+            })
+
         },
         selectedShow:function () {
             var showColorSize = zy_self.$('#show-select-item');
@@ -444,7 +481,6 @@ require(['../js/zy.js'],function(zy) {
                             this.style.cssText = 'border:1px solid #B4B4B4;';
                             zy_self.$('.active-color')[0].parentNode.parentNode.style.cssText = 'border:1px solid #a10000';
                         }
-
                     });
                 }
             }
@@ -467,7 +503,6 @@ require(['../js/zy.js'],function(zy) {
         triangleButClick:function () {
             var up = zy_self.$('#last-page'),
                 down = zy_self.$('#next-page'),
-                next = zy_self.$('#next-page'),
                 left_pic_select = zy_self.$('#left-pic-select');
             mouseEvent(up,'mousedown',-310,down);
             mouseEvent(down,'mousedown',12,up);
@@ -481,7 +516,6 @@ require(['../js/zy.js'],function(zy) {
                         pro.style.borderBottomColor = '#666666';
                     }
                     left_pic_select.style.marginTop = margin+'px';
-
                 });
             }
         },
@@ -495,7 +529,26 @@ require(['../js/zy.js'],function(zy) {
             closeIcon.addEventListener('click',function () {
                 car.style.display = 'none';
             });
-        }
+        },
+        carOpnInTop:function () {
+            var rightAreaSelect = zy_self.$('#right-area-select'),
+                rightClone= rightAreaSelect.cloneNode(true),
+                middlePic = '<div id="big-shopingCar"></div>',
+                activeColor = document.querySelector('.active-color'),
+                imgIndex = activeColor.parentNode.parentNode.getAttribute('index').substr(-1,1),
+                img = new Image(),
+                that = this;
+            document.body.innerHTML += middlePic;
+            zy_self.$('#head-addCar').addEventListener('click',function () {
+                var bigShopingCar = zy_self.$('#big-shopingCar');
+                zy_self.$('#right-area-select').style.visibility = 'hidden';
+                img.src='../images/common-pic-'+imgIndex+'-0.jpg';
+                img.onload = function () {
+                    bigShopingCar.appendChild(img);
+                    bigShopingCar.appendChild(that.selectRightArea);
+                };
+            });
+        },
     };
     new picShow();
     var scrollNav = function () {
@@ -555,6 +608,7 @@ require(['../js/zy.js'],function(zy) {
     new scrollNav();
     var commentsChoose = function () {
         this.chooseType();
+        this.myAsk();
     };
     commentsChoose.prototype = {
         chooseType:function () {
@@ -571,6 +625,28 @@ require(['../js/zy.js'],function(zy) {
                 commentsListContent.style.display = 'none';
                 picCommentsList.style.display = 'block';
             });
+        },
+        myAsk:function () {
+            var myA = zy_self.$('#my-A'),
+                want_Q = zy_self.$('#want-Q'),
+                A_text = zy_self.$('#A-text'),
+                A_submit = zy_self.$('#A-submit'),
+                AQ_close = zy_self.$('#AQ-close');
+            want_Q.addEventListener('click',function () {
+                myA.style.display = 'block';
+            });
+            AQ_close.addEventListener('click',function () {
+                myA.style.display = 'none';
+            });
+            A_submit.addEventListener('click',function () {
+                if(A_text.value == ''){
+                    alert("请输入提问内容！");
+                }else{
+                    alert('提问已提交，请等待审核！');
+                    myA.style.display = 'none';
+                }
+            });
+
         },
     }
     new commentsChoose();
