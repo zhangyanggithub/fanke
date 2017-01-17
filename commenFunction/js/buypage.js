@@ -71,7 +71,7 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
         this.openIndexPage();
         this.Intellisense();
         this.userItemHover();
-        this.goto(50);
+        // this.goto(50);
     };
     pieces.prototype = {
         openIndexPage:function () {
@@ -180,7 +180,7 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
         },
         goto:function (speed) {
             var topEle = zy_self.$('#to-top'),
-                minH = 800,
+                minH = 100,
                 timer = null,
                 flag = true;
             window.addEventListener('scroll',function () {
@@ -233,13 +233,14 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
         this.selectRightArea='';
         this.mouseEvent();
         this.addColor();
-        this.carOpnInTop();
         this.selectColor();
         this.selectSize();
         this.selectedShow();
         this.changeCommon();
         this.leftHoverEvent();
-        this.carOpen();
+        // this.carOpen();
+        this.carOpenJ();
+        // this.carOpnInTopJ();
     };
     picShow.prototype = {
         leftHoverEvent:function () {
@@ -363,6 +364,7 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
         * 通过选择颜色定位左边的小图片
         * */
         selectColor:function () {
+            this.selectRightArea = zy_self.$('#right-area-select').cloneNode(true);
             this.selectColorSize('color');
             var ul = zy_self.$('#color').getElementsByTagName('ul')[0];
             var ulChild = ul.children;
@@ -409,7 +411,6 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
                     };
                 });
             }
-            this.selectRightArea = zy_self.$('#right-area-select').cloneNode(true);
         },
         selectColorJ:function () {
 
@@ -530,6 +531,17 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
                 car.style.display = 'none';
             });
         },
+        carOpenJ:function () {
+            var car = jquery('#added-car'),
+                addCar = jquery('#addcar'),
+                closeIcon =jquery('#car-close');
+            addCar.on('click',function () {
+                car.css('display','block');
+            });
+            closeIcon.on('click',function () {
+                car.css('display','none');
+            });
+        },
         carOpnInTop:function () {
             var rightAreaSelect = zy_self.$('#right-area-select'),
                 rightClone= rightAreaSelect.cloneNode(true),
@@ -538,23 +550,44 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
                 imgIndex = activeColor.parentNode.parentNode.getAttribute('index').substr(-1,1),
                 img = new Image(),
                 that = this;
-            document.body.innerHTML += middlePic;
+            zy_self.$('#wrap').innerHTML += middlePic;
             zy_self.$('#head-addCar').addEventListener('click',function () {
                 var bigShopingCar = zy_self.$('#big-shopingCar');
-                zy_self.$('#right-area-select').style.visibility = 'hidden';
+                // zy_self.$('#right-area-select').style.visibility = 'hidden';
+                // zy_self.$('#right-area-select').remove();
                 img.src='../images/common-pic-'+imgIndex+'-0.jpg';
                 img.onload = function () {
                     bigShopingCar.appendChild(img);
-                    bigShopingCar.appendChild(that.selectRightArea);
+                    bigShopingCar.appendChild(rightClone);
                 };
             });
+        },
+        carOpnInTopJ:function () {
+            var rightAreaSelect = jquery('#right-area-select'),
+                rightClone= rightAreaSelect.clone(true),
+                middlePic = '<div id="big-shopingCar"></div>',
+                activeColor = jquery('.active-color'),
+                imgIndex = activeColor.parent().parent().attr('index').substr(-1,1),
+                img = new Image(),
+                that = this;
+            document.body.innerHTML += middlePic;
+            var bigShopingCar = jquery('#big-shopingCar');
+            jquery('#head-addCar').on('click',function () {
+                bigShopingCar.css('display','block');
+                jquery('#right-area-select').css('display','none');
+                img.src='../images/common-pic-'+imgIndex+'-0.jpg';
+                img.onload = function () {
+                    bigShopingCar.append(img);
+                    bigShopingCar.append(rightClone);
+                };
+        });
         },
     };
     new picShow();
     var scrollNav = function () {
         this.nav_len = [];
         this.setNavArr();
-        this.fixTitle();
+        this.fixTitleAndScroll();
     };
     scrollNav.prototype = {
         setNavArr:function () {
@@ -563,7 +596,7 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
             this.nav_len.push(img.offsetTop);
         }
         },
-        fixTitle:function () {
+        fixTitleAndScroll:function () {
             var will_fixed = zy_self.$('#will-fixed'),
               head_addCar = zy_self.$('#head-addCar'),
               h1 = zy_self.$('#hr-bottom-desnav'),
@@ -571,15 +604,43 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
               choose_img = zy_self.$('.choose-img'),
               tempIndex ,
               that = this,
-              scrollTop;
+               topEle = zy_self.$('#to-top'),
+               minH = 100,
+               timer = null,
+               flag = true,
+               scrollTop,
+               speed = 50;
             for(var ele of choose_img){
                 ele.addEventListener('click',function () {
                     tempIndex = this.id.substr(-1,1);
                     document.documentElement.scrollTop = document.body.scrollTop = zy_self.$('#select'+tempIndex).offsetTop;
                 });
             }
+            topEle.addEventListener('click',function () {
+                timer = setInterval(function () {
+                    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop ;
+                    document.documentElement.scrollTop = document.body.scrollTop -= speed;
+                    speed += 150;
+                    flag = true;
+                    if(scrollTop <= 0){
+                        clearInterval(timer);
+                    }
+                },70);
+            });
             window.addEventListener('scroll',function () {
+
                 scrollTop = document.documentElement.scrollTop | document.body.scrollTop;
+                if(scrollTop > minH){
+                    // speed = 0;
+                    topEle.style.display = 'block';
+                }
+                if(scrollTop < minH){
+                    topEle.style.display = 'none';
+                }
+                if(!flag){
+                    clearInterval(timer);
+                }
+                flag = false;
                 if(scrollTop > 600 ){
                     will_fixed.style.cssText = 'position: fixed;top:0px;left:0px;width:100%;min-width:980px';
                     head_addCar.style.cssText = 'display:block';
