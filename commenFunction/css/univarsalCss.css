@@ -5,6 +5,7 @@
 }
 a{
     text-decoration: none;
+    color:#000;
 }
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
@@ -13,4 +14,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 ul{
     list-style-type: none;
+    overflow: hidden;
+}
+li{
+    float: left;
+    overflow: hidden;
 }

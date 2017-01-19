@@ -50,6 +50,7 @@
     border-top: 5px solid #B81C22;
     left: -4px;
     overflow: hidden;
+    background-color: #FFF;
     visibility:hidden;
 }
 .menu-son li{

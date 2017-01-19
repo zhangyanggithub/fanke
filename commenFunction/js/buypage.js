@@ -573,8 +573,9 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
             document.body.innerHTML += middlePic;
             var bigShopingCar = jquery('#big-shopingCar');
             jquery('#head-addCar').on('click',function () {
-                bigShopingCar.css('display','block');
-                jquery('#right-area-select').css('display','none');
+                bigShopingCar.css('display','none');
+                // zy_self.$('#right-area-select').style.visibility = 'hidden';
+                // jquery('#right-area-select').css('visibility','hidden');
                 img.src='../images/common-pic-'+imgIndex+'-0.jpg';
                 img.onload = function () {
                     bigShopingCar.append(img);
