@@ -450,15 +450,12 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
             var ul = jquery('#'+id+' ul'),
                 li = ul.children('li');
             ul.delegate('li','click',function () {
-
-                   for(var j = 0; j<li.length; j++){
-                            ulChild[j].getElementsByTagName('span')[0].className = '';
-                            ulChild[j].style.cssText = 'border:1px solid #B4B4B4;';
-                        }
-                        this.getElementsByTagName('span')[0].className = 'active-color';
-                        this.style.cssText = 'border:1px solid #a10000';
-
-
+                for(var j = 0; j<li.length; j++){
+                    li[j].getElementsByTagName('span')[0].className = '';
+                    li[j].style.cssText = 'border:1px solid #B4B4B4;';
+                }
+                this.getElementsByTagName('span')[0].className = 'active-color';
+                this.style.cssText = 'border:1px solid #a10000';
             })
 
         },

@@ -59,3 +59,118 @@
     height: 39px;
     width: 120px;
 }
+#help{
+    width: 1198px;
+    padding-top: 20px;
+    height: 234px;
+    margin: 41px 0 26px 0;
+    border: 1px solid #e0e0e1;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    color: #727171;
+    position: relative;
+    background-color: #FFFFFF;
+}
+.fl{
+    width: 371px;
+    height:138px;
+    float: left;
+    position: relative;
+}
+#custom-care p{
+    padding: 7px 20px;
+    width: 108px;
+    background-color: #b81c22;
+    color: #FFF;
+    position: absolute;
+    left: 50%;
+    margin: 76px 0 0 -74px;
+}
+.help-headers img{
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    left: 50%;
+    margin: 20px 0 0 -19px;
+}
+
+#help ul{
+    margin-left: 9px;
+    position: absolute;
+    padding: 12px 0;
+    background: #f8f8f8;
+    width: 91%;
+    top: 175px;
+}
+#help li{
+    border-right: thin solid #e0e0e1;
+    text-align: center;
+    line-height: 26px;
+    width: 179px;
+    height: 26px;
+    float: left;
+}
+#help li:last-child{
+    border-right:0;
+}
+#help li a{
+    text-decoration: none;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #727171;
+}
+#cancel-orders{
+    border-left: 1px solid #e0e0e1;
+    border-right: 1px solid #e0e0e1;
+}
+#download-client img{
+    width: 104px;
+    height: 104px;
+    position: absolute;
+    left: 50%;
+    margin-left: -52px;
+}
+#download-client p{
+    position: absolute;
+    left: 50%;
+    margin: 111px 0 0 -63px;
+}
+#p1{
+    position: absolute;
+    left: 50%;
+    margin: 71px 0 0 -41px;
+}
+#p2{
+    position: absolute;
+    left: 50%;
+    top: 96px;
+    margin-left: -60px;
+}
+
+#gotop{
+    width: 73px;
+    position: fixed;
+    bottom: 40px;
+    right:20px;
+}
+#download{
+    border:1px solid #b81b22;
+    border-bottom: 0;
+    height:77px;
+    background: url("../images/gotop.png") no-repeat -1px -1px;
+}
+#onlineService{
+    border:1px solid #b81b22;
+    height:72px;
+    background: url("../images/gotop.png") no-repeat -1px -78px;
+}
+#to-top{
+    display: none;
+    height:56px;
+    background: url("../images/gotop.png") no-repeat -1px -149px;
+}
+#gotop div a{
+    display: block;
+    width:100%;
+    height:100%;
+}

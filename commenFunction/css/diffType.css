@@ -78,7 +78,7 @@ img{
 #select-two li a{
     font-weight: bold;
     font-size: 12px;
-    padding:10px 39%;
+    padding:10px 36%;
     color:#000;
 }
 #last-goods{
@@ -183,4 +183,10 @@ p.price-in-type {
 }
 .over-hide{
     overflow: hidden;
+}
+#l-ul,.leisure-tri{
+    visibility: hidden;
+}
+#leisure-click{
+    display: none;
 }
