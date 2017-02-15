@@ -1,0 +1,21 @@
+{
+  "name": "fanke",
+  "version": "1.0.0",
+  "description": "fanke wanting livereload",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "livereload"
+  ],
+  "author": "zhangyang",
+  "license": "ISC",
+  "devDependencies": {
+    "connect-livereload": "^0.6.0",
+    "grunt": "~0.4.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-livereload": "^0.1.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
