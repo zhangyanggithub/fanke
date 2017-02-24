@@ -5,7 +5,7 @@ require.config({
 });
 require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
     new publicApp.carousel();
-    publicApp.pieces;
+    new publicApp.pieces();
     var chooseBL = function () {
         this.clcikEvent();
     };

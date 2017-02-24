@@ -181,7 +181,7 @@ define(function () {
     var pieces = function () {
         this.ajaxData = [];
         this.ajaxData2 = [];
-        this.copyright();//设置版权位置
+        // this.copyright();//设置版权位置
         this.focus();//自动对焦
         this.openIndexPage();//打开主页
         this.Intellisense();//智能填充
@@ -333,7 +333,7 @@ define(function () {
        ],
         getNeibor:new getNeibor(),
         carousel:carousel,
-        pieces:new pieces()
+        pieces:pieces
     }
  /*   return{
         menu:menu,

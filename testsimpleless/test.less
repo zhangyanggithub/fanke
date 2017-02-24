@@ -1,0 +1,46 @@
+@deepred:#8c0e13;
+@w:`window.screen.width`;
+@h:100px;
+@fnord: "I am fnord.";
+@var: 'fnord';
+.mixin (@a) when (lightness(@a) >= 50%) {
+  background-color: black;
+}
+.mixin (@a) when (lightness(@a) < 50%) {
+  background-color: white;
+}
+.mixin (@a) {
+  color: @a;
+}
+.box-shadow (@x,@y: 4px, @s: 5px, @color: #990) {
+  box-shadow: @arguments;
+}
+.color(@c:red){
+  color:red;
+}
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.outer{
+  &:after{
+    content:@@var;
+    display: block;
+    //.color(black);
+    .mixin(#999)
+  }
+  width:@w;
+  height:@h;
+  background-color: @deepred+#e1e1e1;
+  & .inner{
+    width:@w - 50%;
+    height:@h - 50%;
+    background-color: spin(#990,+10);
+    border-radius: 10%;
+    .box-shadow(15px);
+    .border-radius(6px);
+  }
+}
+
+

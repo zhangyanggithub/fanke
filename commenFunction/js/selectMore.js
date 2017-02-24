@@ -141,6 +141,5 @@ require(['../js/publicApplication.js'],function(publicApp){
       },
     };
     new styleHover();
-    publicApp.pieces;
-
-})
+    new publicApp.pieces()
+});

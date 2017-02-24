@@ -489,5 +489,5 @@ require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
         },
     }
     new commentsChoose();
-    publicApp.pieces;
+    new publicApp.pieces();
 });

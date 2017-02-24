@@ -1,12 +1,17 @@
 
 #copyright{
-    border-top: 1px solid;
+    /*border-top: 1px solid;
     padding-top: 10px;
     float: left;
     height: 136px;
     width: 100%;
     position: absolute;
-    top: 5735px;
+    top: 5735px;*/
+    border-top: 1px solid;
+    padding-top: 10px;
+    /* float: left; */
+    height: 136px;
+    width: 100%;
 }
 #copyright p{
     text-align: center;
@@ -95,7 +100,7 @@
 }
 
 #help ul{
-    margin-left: 9px;
+    margin-left: 53px;
     position: absolute;
     padding: 12px 0;
     background: #f8f8f8;

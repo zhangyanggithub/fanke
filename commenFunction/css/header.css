@@ -10,14 +10,22 @@ ul{
     list-style: none;
 }
 #header{
+   /* height: 31px;
+    background: #f7f7f7;
+    color: #808080;
+    font-size: 12px;
+    font-family: "宋体";*/
+    overflow: hidden;
+}
+#user{
+    /*margin-left: 58%;*/
+    padding-left: 58%;
+    width: 100%;
     height: 31px;
     background: #f7f7f7;
     color: #808080;
     font-size: 12px;
     font-family: "宋体";
-}
-#user{
-    margin-left: 58%;
 }
 #user div{
     float: left;
@@ -51,6 +59,7 @@ ul{
     background: url("../images/weixin.jpg") no-repeat;
 }
 #big-wechat-icon{
+    z-index:10;
     display: none;
     position: absolute;
     top: 13px;
@@ -74,12 +83,19 @@ ul{
     margin-top: 7px !important;
 }
 #search{
-    font-size: 12px;
+    /*font-size: 12px;
     font-family: "宋体";
     color: #333;
     width:438px;
     height:60px;
-    margin:-37px 0 0 757px;
+    margin:-37px 0 0 757px;*/
+    font-size: 12px;
+    font-family: "宋体";
+    color: #333;
+    width: 438px;
+    height: 60px;
+    float: right;
+    margin: 20px 195px;
 }
 #search-box{
     height:29px;
@@ -161,9 +177,11 @@ ul{
     color: #727171;
 }
 #wrap{
-    position: absolute;
-    width: 1200px;
+   /* position: absolute;
+
     top: 100px;
     left: 50%;
-    margin-left: -600px;
+    margin-left: -600px;*/
+    margin: 0 auto;
+    width: 1200px;
 }
