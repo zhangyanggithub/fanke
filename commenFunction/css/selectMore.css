@@ -58,7 +58,7 @@
     overflow: hidden;
     color: #666;
     font-size: 13px;
-    font-family: "ËÎÌå";
+    font-family: "å®‹ä½“";
     margin: 5px auto;
 }
 .contain-comments{
@@ -66,7 +66,7 @@
 }
 .scannone-comments p{
     line-height: 20px;
-    transition: all 2s;
+    transition: all 4s;
 }
 .scannbigLeft .scannOne-big{
     left:-306px;
@@ -124,7 +124,7 @@
 }
 .scannOne-id{
     font-size: 12px;
-    font-family:"ËÎÌå";
+    font-family:"ï¿½ï¿½ï¿½ï¿½";
     color: #999;
     margin: 5px 0;
 }
@@ -144,7 +144,7 @@
     font-size: 13px;
     color:#b81c22;
     width:43px;
-    font-family:"ËÎÌå";
+    font-family:"ï¿½ï¿½ï¿½ï¿½";
     float: left;
     margin:18px 0 9px 105px;
 }
@@ -176,7 +176,7 @@
     background-color: #a20000;
     color:#FFF;
 }*/
-.allS-collar span[title="»¨É«"]{
+.allS-collar span[title="ï¿½ï¿½É«"]{
     border-bottom: 0;
 }
 #all-style ul:nth-child(1){

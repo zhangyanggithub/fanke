@@ -1,10 +1,9 @@
 require(['../js/publicApplication.js'],function(publicApp){
-    //new publicApp.carousel();
     var selectMore = function () {
         this.animationInterval = null;
         this.animationTimeout = null;
         this.commentsList = [];
-        // this.hoverSeeBig();
+        this.hoverSeeBig();
         this.hideTri();
     };
     selectMore.prototype = {
@@ -17,7 +16,7 @@ require(['../js/publicApplication.js'],function(publicApp){
                   littleImg[i].addEventListener('mouseover',function(){
                       scannBig[i].style.display = 'block';
                       that.getcommentsList("xx");//根据用户ID获取用户评论
-                      that.commentInterval2();
+                      that.commentInterval2(this.parentNode.parentNode);
                   });
                   littleImg[i].addEventListener('mouseleave',function(){
                       scannBig[i].style.display = 'none';
@@ -40,6 +39,7 @@ require(['../js/publicApplication.js'],function(publicApp){
       },
       commentInterval:function(){
           var commentsWrap = document.getElementsByClassName('scannone-comments')[0],
+              scannOne = document.getElementsByClassName('scannOne')[0],
               commentsP,
               index=0,
               tempUser,tempComments,
@@ -60,31 +60,28 @@ require(['../js/publicApplication.js'],function(publicApp){
               }
           },2000);
       },
-    commentInterval2:function(){
-            var commentsWrap = document.getElementsByClassName('scannone-comments'),
-                commentsP,
+    commentInterval2:function(fatherEle){
+            var commentsWrap = fatherEle.getElementsByClassName('scannone-comments')[0],
+                commentsP = commentsWrap.getElementsByTagName('p')[0],
                 index=0,
                 tempUser,tempComments,
-                contain;
-            for(var i=0,len=commentsWrap.length;i<len;i++){
-                contain = commentsWrap[i].getElementsByClassName('contain-comments')[0];
+                contain = commentsWrap.getElementsByClassName('contain-comments')[0];
                 this.animationInterval = setInterval(()=>{
-                    console.log(i);
-                    commentsP = commentsWrap[i].getElementsByTagName('p')[0];
+                    commentsP = commentsWrap.getElementsByTagName('p')[0],
                     commentsP.style.marginTop = -40+'px';
                     for(var u in this.commentsList[index]) {
                         tempUser = u;
                         tempComments = this.commentsList[index][u];
                     }
                     this.animationTimeout = setTimeout(()=>{
-                        commentsWrap[i].innerHTML = '<p index="pInComments"><span>'+tempUser+'</span><span>'+tempComments+'</span></p>';
-                    },1500);
+                        contain.innerHTML = '<p><span>'+tempUser+'</span><span>'+tempComments+'</span></p>';
+                    },2000);
                     index++;
                     if(index == this.commentsList.length){
                         index = 0;
                     }
-                },2000);
-            }
+                },4000);
+
         },
         //点击小三角隐藏所有颜色图标
         hideTri:function(){
