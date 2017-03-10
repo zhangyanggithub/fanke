@@ -5,11 +5,9 @@ require.config({
 });
 require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
     var getneibor =  publicApp.getNeibor;
+    var myEvent = new publicApp.myEvent();
     var picShow = function () {
         this.color = '藏蓝';
-        this.colorSelectArea='';
-        this.sizeSelectArea='';
-        this.selectRightArea='';
         this.mouseEvent();
         this.addColor();
         this.selectColor();
@@ -17,9 +15,9 @@ require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
         this.selectedShow();
         this.changeCommon();
         this.leftHoverEvent();
-        // this.carOpen();
-        this.carOpenJ();
-        // this.carOpnInTopJ();
+        this.carOpen();
+      /*  this.carOpenJ();*/
+        this.carOpnInTop();
     };
     picShow.prototype = {
         leftHoverEvent:function () {
@@ -34,15 +32,15 @@ require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
             }
         },
         windowLoad:function () {
-            var colorDes = document.querySelectorAll('.colorDes');
-            var colorIndex;
-            var img = new Image();
-            var tempList = '<li class="left-select-pic" index="look-{index}"></li>';
-            var html = [];
-            var len;
-            var tempH;
-            var left_pic_select = document.querySelector('#left-pic-select');
-            var leftList;
+            var colorDes = document.querySelectorAll('.colorDes'),
+                 colorIndex,
+                 img = new Image(),
+                 tempList = '<li class="left-select-pic" index="look-{index}"></li>',
+                 html = [],
+                 len,
+                 tempH,
+                 left_pic_select = document.querySelector('#left-pic-select'),
+                 leftList;
             for(var ele of colorDes){
                 if(ele.innerHTML == this.color){
                     ele.parentNode.parentNode.style.cssText = 'border:1px solid #a10000;';
@@ -144,19 +142,18 @@ require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
          * 通过选择颜色定位左边的小图片
          * */
         selectColor:function () {
-            this.selectRightArea = document.querySelector('#right-area-select').cloneNode(true);
             this.selectColorSize('color');
-            var ul = document.querySelector('#color').getElementsByTagName('ul')[0];
-            var ulChild = ul.children;
-            var currentIndex ;
-            var tempList = '<li class="left-select-pic" index="look-{index}"></li>';
-            var html = [];
-            var len;
-            var tempH;
-            var img = new Image();
-            var left_pic_select = document.querySelector('#left-pic-select');
-            var leftList;
-            var that = this;
+            var ul = document.querySelector('#color').getElementsByTagName('ul')[0],
+                     ulChild = ul.children,
+                     currentIndex ,
+                     tempList = '<li class="left-select-pic" index="look-{index}"></li>',
+                     html = [],
+                     len,
+                     tempH,
+                     img = new Image(),
+                     left_pic_select = document.querySelector('#left-pic-select'),
+                     leftList,
+                     that = this;
             for(var i = 0; i<ulChild.length; i++){
                 ulChild[i].addEventListener('click',function () {
                     document.querySelector('#common-pic').style.marginLeft = '80px';
@@ -239,11 +236,11 @@ require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
             })
         },
         selectedShow:function () {
-            var showColorSize = document.querySelector('#show-select-item');document.querySelectorAll
-            var eleSelect;
-            var color;
-            var size;
-            var typeList;
+            var showColorSize = document.querySelector('#show-select-item'),
+             eleSelect,
+             color,
+             size,
+             typeList;
             listenHover('color','mouseenter');
             listenHover('color','mouseleave');
             listenSelect('size');
@@ -318,24 +315,50 @@ require(['../js/publicApplication.js','jquery'],function (publicApp,$) {
                 car.css('display','none');
             });
         },
+        headCarClose:function () {
+            var headCarClose = document.querySelector('#close_headCar'),
+                bigShopingCar = document.querySelector('#big-shopingCar'),
+                selectArea = document.querySelector('#select-area')
+                that = this;
+            myEvent.addHandler(headCarClose,'click',function () {
+                bigShopingCar.style.display = 'none';
+                selectArea.appendChild(document.querySelector('#right-area-select'));
+                that.selectColor();
+                that.selectSize();
+                that.changeCommon();
+                that.leftHoverEvent();
+                // document.querySelector('#right-area-select').style.display = 'block';
+            });
+                },
         carOpnInTop:function () {
             var rightAreaSelect = document.querySelector('#right-area-select'),
                 rightClone= rightAreaSelect.cloneNode(true),
-                middlePic = '<div id="big-shopingCar"></div>',
-                activeColor = document.querySelectorAll('.active-color'),
+                middlePic = document.createElement('div'),
+                activeColor = document.getElementsByClassName('active-color')[0],
+                closeHeadCar = document.createElement('span'),
+                closeHeadCarbg = document.createElement('div'),
                 imgIndex = activeColor.parentNode.parentNode.getAttribute('index').substr(-1,1),
                 img = new Image(),
                 that = this;
-            document.querySelector('#wrap').innerHTML += middlePic;
+            closeHeadCar.id = 'close_headCar';
+            closeHeadCar.appendChild(document.createTextNode('X'));
+            img.src='../images/common-pic-'+imgIndex+'-0.jpg';
+            middlePic.id = 'big-shopingCar';
+            closeHeadCarbg.id = 'closeHeadCarbg';
+            closeHeadCarbg.appendChild(closeHeadCar);
+            middlePic.appendChild(closeHeadCarbg);
+            document.querySelector('#wrap').appendChild(middlePic);
             document.querySelector('#head-addCar').addEventListener('click',function () {
                 var bigShopingCar = document.querySelector('#big-shopingCar');
-                // document.querySelector('#right-area-select').style.visibility = 'hidden';
-                // document.querySelector('#right-area-select').remove();
-                img.src='../images/common-pic-'+imgIndex+'-0.jpg';
-                img.onload = function () {
-                    bigShopingCar.appendChild(img);
-                    bigShopingCar.appendChild(rightClone);
-                };
+                bigShopingCar.style.display = 'block';
+                document.querySelector('#right-area-select').remove();
+                bigShopingCar.appendChild(img);
+                bigShopingCar.appendChild(rightClone);
+                that.selectColorSize('color');
+                that.selectSize();
+                that.selectedShow();
+                that.carOpen();
+                that.headCarClose();
             });
         },
         carOpnInTopJ:function () {

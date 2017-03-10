@@ -755,3 +755,20 @@ a:active{
     height:262px;
     float: left;
 }
+#close_headCar{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FFF;
+    width: 23px;
+    height: 28px;
+    font-size: 28px;
+    display: inline-block;
+    cursor: pointer;
+
+}
+#closeHeadCarbg{
+    height:50px;
+    background-color: #8c0e13;
+    margin: -20px -20px 0 -20px;
+}

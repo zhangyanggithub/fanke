@@ -67,7 +67,7 @@ require(['../js/publicApplication.js'],function(publicApp){
                 tempUser,tempComments,
                 contain = commentsWrap.getElementsByClassName('contain-comments')[0];
                 this.animationInterval = setInterval(()=>{
-                    commentsP = commentsWrap.getElementsByTagName('p')[0],
+                    commentsP = commentsWrap.getElementsByTagName('p')[0];
                     commentsP.style.marginTop = -40+'px';
                     for(var u in this.commentsList[index]) {
                         tempUser = u;

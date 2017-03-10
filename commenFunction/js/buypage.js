@@ -255,15 +255,15 @@ require(['../js/zy.js','jquery'],function(zy,jquery) {
             }
         },
         windowLoad:function () {
-            var colorDes = zy_self.$('.colorDes');
-            var colorIndex;
-            var img = new Image();
-            var tempList = '<li class="left-select-pic" index="look-{index}"></li>';
-            var html = [];
-            var len;
-            var tempH;
-            var left_pic_select = zy_self.$('#left-pic-select');
-            var leftList;
+            var colorDes = zy_self.$('.colorDes'),
+                colorIndex,
+                img = new Image(),
+                tempList = '<li class="left-select-pic" index="look-{index}"></li>',
+                html = [],
+                len,
+                tempH,
+                left_pic_select = zy_self.$('#left-pic-select'),
+                leftList;
             for(var ele of colorDes){
                 if(ele.innerHTML == this.color){
                     ele.parentNode.parentNode.style.cssText = 'border:1px solid #a10000;';

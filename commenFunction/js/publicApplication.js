@@ -41,10 +41,10 @@ define(function () {
             for(var i = 1,len=document.querySelectorAll('.menu-item').length; i< len;i++){
                 (function (i) {
                     document.querySelectorAll('.menu-item')[i].addEventListener(flag,function () {
-                        var contentEle = this.getElementsByClassName('menu-son')[0];
-                        var contentUl = contentEle.getElementsByTagName('ul')[0];
-                        var a = that.ulHeight[i];
-                        var h;
+                        var contentEle = this.getElementsByClassName('menu-son')[0],
+                            contentUl = contentEle.getElementsByTagName('ul')[0],
+                            a = that.ulHeight[i],
+                            h;
                         if(flag == 'mouseleave'){
                             h = a;
                         }else{
@@ -239,12 +239,12 @@ define(function () {
             }else if(window.ActiveXObject){
                 xml = new ActiveXObject('Msxml2.XMLHTTP');
             }
-            xml.open('GET',url,true);
             xml.onreadystatechange = function () {
-                if(xml.status == 200 && xml.readyState == 4){
+                if(200 <= xml.status <=304 && xml.readyState == 4){
                     that.setAjaxData(xml.responseText);
                 }
             };
+            xml.open('GET',url,true);
             xml.send(null);
         },
         setAjaxData:function (s) {
@@ -292,7 +292,6 @@ define(function () {
             inputItem.addEventListener('mouseleave',function () {
                 this.style.display = 'none';
             });
-
         },
         gotop:function (speed) {
             var topEle = document.querySelector('#to-top'),
@@ -323,7 +322,7 @@ define(function () {
                     if(scrollTop <= 0){
                         clearInterval(timer);
                     }
-                },10);
+                },50);
             });
         },
     };
